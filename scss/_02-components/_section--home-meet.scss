@@ -1,0 +1,72 @@
+.section--home-meet {
+    .block--meet-text {
+        padding: (2.5em * $grid) (1.7em * $grid);
+
+        @include media($screen-xs) {}
+
+
+        @include media($screen-xsm) {}
+
+
+        @include media($screen-sm) {
+            padding: 2.5em * $grid;
+        }
+
+
+        @include media($screen-smd) {
+            padding: 3em * $grid;
+        }
+
+
+        @include media($screen-md) {
+            padding: 4em * $grid;
+        }
+
+
+        @include media($screen-lg) {
+            padding: 5em * $grid;
+        }
+
+
+        @include media($screen-xl) {}
+
+
+        .block--person {
+            i {
+                height: 50px;
+                width: auto;
+                display: inline-block;
+                position: relative;
+                transform: translateY(1em);
+
+                svg {
+                    position: absolute;
+                    top: 50%;
+                    display: block;
+                    transform: translateY(-50%);
+                }
+
+                &.icon-sig-brit {
+                    svg {
+                        height: 80px;
+                        width: auto;
+                    }
+                }
+
+                &.icon-sig-char {
+                    svg {
+                        height: 50px;
+                        width: auto;
+                    }
+                }
+            }
+        }
+    }
+
+    .bgimg {
+        @include media($max-sm) {
+            min-height: 350px;
+            background-position: top center;
+        }
+    }
+}

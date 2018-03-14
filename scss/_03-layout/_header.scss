@@ -1,0 +1,91 @@
+header.header {
+    position: relative;
+    z-index: 99;
+    padding: (0.7em * $grid) (1.7em * $grid);
+
+    @include media($screen-xsm) {
+        padding: 0 (1.7em * $grid);
+        margin-top: 1.7em * $grid;
+    }
+
+
+    @include media($screen-sm) {}
+
+
+    @include media($screen-smd) {}
+
+
+    @include media($screen-md) {}
+
+
+    @include media($screen-lg) {}
+
+
+    @include media($screen-xl) {}
+
+
+    @include media($screen-lg) {
+        margin-top: 3em * $grid;
+    }
+
+
+    @include media($screen-xl) {
+        padding: 0;
+    }
+
+
+    h1 {
+        z-index: 99999999;
+        position: relative;
+
+        @include media($max-xs) {
+            width: 190px;
+            height: 40px;
+            margin: 0;
+            display: block;
+
+            a {
+                width: 190px;
+                height: 40px;
+                margin: 0;
+                display: block;
+
+                .icon-logo {
+                    width: 190px;
+                    height: 40px;
+                    margin: 0;
+                    display: block;
+
+                    svg {
+                        > path {
+                            display: none;
+                        }
+
+                        g {
+                            transition: fill 0.3s $base-animation;
+
+                            // since we hide the seal, this makes the text fill its parent element
+                            transform: scale(1.2);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+header.header {
+    @include media($screen-xs) {
+        .menu--trigger {
+            display: none;
+        }
+
+        h1 {
+            order: 1;
+        }
+
+        nav {
+            order: 2;
+        }
+    }
+}

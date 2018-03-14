@@ -1,0 +1,10 @@
+<section class="section--home-welcome flex flex--wrap margin--center justify--between align--items-center spacing--gutter-mob">
+	<div class="block--bottles grid--one grid--sm-two-fifths grid--md-half border-box">
+		<img src="{{home.welcome.image}}">
+		<i class="icon-writing" data-grunticon-embed></i>
+	</div>
+	<div class="block--welcome grid--one grid--sm-three-fifths grid--md-half grid--lg-two-fifths border-box">
+		<h2 class="text--uppercase color--gold-dark">{{home.welcome.title}}</h2>
+		<p class="welcome--content">{{home.welcome.content|striptags}} {% if home.welcome.link %}<a href="{{home.welcome.link.url}}" title="{{home.welcome.link.title}}" target="{{home.welcome.link.target}}" class="button">{{home.welcome.link.title}} <i class="icon-angle-right" data-grunticon-embed></i></a>{% endif %}<i class="icon-logo-signature" data-grunticon-embed></i></p>
+	</div>
+</section>

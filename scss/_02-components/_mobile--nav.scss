@@ -1,0 +1,126 @@
+nav {
+    @include media($max-xs) {
+        transition: transform 0.3s $base-animation;
+        transform: translateY(-100%);
+        position: absolute;
+        width: calc(100% - 3.4em) !important;
+        display: block;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: map-get($gold, main);
+        height: calc(100vh - 3.5em);
+        padding-top: 3.5em;
+        padding-left: 1.7em;
+        padding-right: 1.7em;
+
+        ul {
+        	border-top: 1px solid $white;
+        	padding-top: 1em;
+        	margin-top: .5em;
+            opacity: 0;
+            transition: opacity 0.9s $base-animation;
+        }
+    }
+}
+
+.menu--trigger {
+    @include media($max-xs) {
+        width: 24px;
+        height: 24px;
+        margin-top: -0.6em;
+        position: relative;
+        z-index: 99999999;
+        display: block;
+        -webkit-tap-highlight-color: transparent !important;
+
+        span {
+            height: 1px;
+            width: 100%;
+            border-bottom: 2px solid;
+            top: 50%;
+            position: relative;
+            transform: translateY(-50%);
+            display: block;
+            opacity: 1;
+            color: $black;
+            transition: opacity 0.3s $base-animation, color 0.3s $base-animation;
+        }
+
+        &:after, &:before {
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            content: ' ';
+            transform-origin: center;
+            transform: translateY(0) rotate(0);
+            color: $black;
+            transition: transform 0.3s $base-animation, color 0.3s $base-animation;
+        }
+
+        &:before {
+            border-top: 2px solid;
+            top: 0;
+        }
+
+        &:after {
+            border-bottom: 2px solid;
+            bottom: 0;
+        }
+    }
+}
+
+body {
+    @include media($max-xs) {
+        header.header {
+            z-index: 999;
+        }
+
+        &.open {
+            nav {
+                transition: transform 0.3s $base-animation;
+                transform: translateY(0);
+
+                ul {
+                    opacity: 1;
+                    transition: opacity 0.4s $base-animation;
+                }
+            }
+
+            .menu--trigger {
+                background-color: transparent;
+
+                &:after, &:before {
+                    color: $white;
+                    transition: transform 0.3s $base-animation, color 0.3s $base-animation;
+                }
+
+                &:before {
+                    transform: translateY(11px) rotate(45deg);
+                }
+
+                &:after {
+                    transform: rotate(45deg);
+                    transform: translateY(-11px) rotate(-45deg);
+                }
+
+                span {
+                    transition: opacity 0.15s $base-animation;
+                    opacity: 0;
+                }
+            }
+
+            h1 {
+                .icon-logo {
+                    svg {
+                        g {
+                            transition: fill 0.3s $base-animation;
+                            fill: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

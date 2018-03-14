@@ -1,0 +1,93 @@
+.section--home-hero {
+    position: relative;
+    z-index: 98;
+
+
+    @include media($screen-xs) {}
+
+
+    @include media($screen-sm) {}
+
+
+    @include media($screen-md) {
+        padding-left: 3em;
+        padding-right: 3em;
+    }
+
+
+    @include media($screen-lg) {
+        padding-left: 6em;
+        padding-right: 6em;
+    }
+
+
+    @include media($screen-xl) {}
+
+
+    h2 {
+        top: 50%;
+        position: relative;
+        transform: translateY(-50%);
+        z-index: 100;
+        font-size: 1.42em;
+
+        @include media($screen-xs) {
+            font-size: 1.78em;
+        }
+
+        @include media($screen-xsm) {
+            font-size: 2.506em;
+        }
+
+
+        @include media($screen-sm) {
+            font-size: 2.85em;
+        }
+
+
+        @include media($screen-smd) {
+            font-size: 3.153em;
+        }
+
+
+        @include media($screen-md) {
+            font-size: 3.795em;
+        }
+
+
+        @include media($screen-lg) {
+            font-size: 4.213em;
+        }
+
+
+        @include media($screen-xl) {
+            font-size: 4.5em;
+        }
+    }
+
+    img {
+        z-index: 98;
+    }
+
+    img, &:before {
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+    }
+
+    &:before {
+        background-color: $black;
+        opacity: .2;
+        content: ' ';
+        z-index: 99;
+        height: 100%;
+    }
+
+    height: calc((1500 / 2560) * 100vw);
+    max-height: 845px;
+    overflow: hidden;
+}

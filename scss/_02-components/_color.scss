@@ -1,0 +1,28 @@
+.color--gold {
+    color: map-get($gold, main);
+}
+.color--gold-dark {
+    color: map-get($gold, dark);
+}
+.color--gold-faded {
+    color: map-get($gold, faded);
+}
+
+.color--gray {
+    color: $gray;
+}
+
+.color--black {
+    color: $black;
+}
+
+.color--white {
+    color: $white;
+}
+
+.color--gradient {
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: $gradient;
+}

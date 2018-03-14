@@ -1,0 +1,19 @@
+<nav role="navigation" class="grid--one grid--xs-three-fifths grid--sm-two-fifths grid--md-third">
+	<ul class="flex flex--wrap justify--between text--center align--items-center">
+		{% for item in menu.get_items %}
+			<li class="nav-item {{item.classes | join(' ')}}">
+				<a class="nav-link text--uppercase font--din" href="{{item.get_link}}">{{item.title}}</a>
+				{% if item.get_children %}
+					<ul class="nav nav-drop">
+						{% for child in item.get_children %}
+							<li class="nav-drop-item">
+								<a class="nav-link" href="{{child.get_link}}">{{child.title}}</a>
+							</li>
+						{% endfor %}
+					</ul>
+				{% endif %}
+			</li>
+			{% if loop.last %}{% else %}<span class="text--uppercase font--din nav-divide"></span>{% endif %}
+		{% endfor %}
+	</ul>
+	</nav><!-- #nav -->

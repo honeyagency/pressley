@@ -1,0 +1,104 @@
+.section--home-welcome {
+    position: relative;
+    z-index: 99;
+
+    @include media($screen-sm) {
+        margin-bottom: 6em;
+    }
+
+
+    @include media($screen-md) {
+        justify-content: space-between;
+    }
+
+
+    @include media($screen-lg) {
+        justify-content: space-around;
+    }
+
+
+    .block--bottles {
+        @include media($screen-sm) {
+            padding: (4em * $grid) (1em * $grid);
+        }
+
+
+        @include media($screen-md) {
+            padding: (3em * $grid) (1em * $grid);
+        }
+
+
+        position: relative;
+
+        img {
+            transform: translateX(-50%);
+            z-index: 9;
+            width: 200px;
+            display: block;
+            top: -2em;
+            margin-bottom: -2em;
+            left: 50%;
+            position: absolute;
+
+            @include media($screen-sm) {
+                transform: translateX(-50%) translateY(-50%);
+                top: 50%;
+                height: 115%;
+                width: auto;
+                max-width: none;
+            }
+
+
+            @include media($screen-smd) {
+                height: 130%;
+            }
+
+
+            @include media($screen-md) {
+                height: calc(100% + 6em);
+            }
+        }
+
+        @include media($max-sm) {
+            margin-bottom: 6em;
+        }
+    }
+
+    .block--welcome {
+        
+
+        @include media($screen-sm) {
+            padding: (1em * $grid) (2em * $grid) (1em * $grid) (2em * $grid);
+            border-left: 1px solid map-get($gold, dark);
+        }
+
+
+        @include media($screen-md) {
+            padding: (1em * $grid) (3em * $grid) (1em * $grid) (2em * $grid);
+        }
+
+
+        @include media($screen-lg) {
+            padding: (1em * $grid) (3em * $grid) (1em * $grid) (2em * $grid);
+        }
+
+
+        .welcome--content {
+            position: relative;
+
+            @include media($screen-md) {
+                font-size: .95em;
+            }
+        }
+
+        .icon-logo-signature {
+            display: inline-block;
+            width: 250px;
+            position: absolute;
+            right: 1em;
+            bottom: 0;
+            z-index: -1;
+            transform: translateY(75%);
+        }
+    }
+}

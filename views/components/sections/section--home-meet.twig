@@ -1,0 +1,11 @@
+<section class="section--home-meet max-wrap margin--center flex flex--wrap justify--between">
+	<div class="block--meet-text grid--one grid--sm-three-fifths grid--md-half nog bg--gray-light flex flex--wrap justify--between border-box">
+		<h2 class="text--uppercase color--gold-dark">{{home.meet.title}}</h2>
+		<div class="grid--one margin--bot-2">{{home.meet.content|striptags}}<br>
+			{% if home.meet.link %}<a href="{{home.meet.link.url}}" title="{{home.meet.link.title}}" target="{{home.meet.link.target}}" class="button">{{home.meet.link.title}} <i class="icon-angle-right" data-grunticon-embed></i></a>{% endif %}
+		</div>
+		{% include 'components/blocks/block--meet-peeps.twig' %}
+	</div>
+	<div class="grid--one grid--sm-two-fifths grid--md-half nog bgimg" style="background-image:url('{{home.meet.image}}')">
+	</div>
+</section>

@@ -1,0 +1,31 @@
+.section--footer {
+    .block--footer-logo {
+        i {
+            display: block;
+            margin: 0 auto;
+            max-width: 250px;
+        }
+    }
+
+    @include media($screen-lg) {
+        .block--footer-nav-1 {
+            order: 2;
+        }
+
+        .block--footer-nav-2 {
+            order: 3;
+        }
+
+        .block--footer-social {
+            order: 4;
+        }
+
+        .block--footer-logo {
+            order: 1;
+        }
+
+        .block--footer-email {
+            order: 5;
+        }
+    }
+}

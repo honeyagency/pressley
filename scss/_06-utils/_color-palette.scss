@@ -1,0 +1,32 @@
+// -----------------------------------------------------------------------------
+// Color one in the pallete
+// -----------------------------------------------------------------------------
+
+$gold: (
+	faded: 			#E0D0A6,
+	main: 			#85754E,
+	dark: 			#998543,
+);
+
+
+$gray: 				#A7A8AA;
+$lightgray:			#F0F0EF;
+$black: 			#2D2926;
+$white:				#F9F6ED;
+
+
+$gradient: linear-gradient(45deg, map-get($gold, dark) 34%, map-get($gold, faded) 66%);
+
+
+// -----------------------------------------------------------------------------
+// Social Icons
+// -----------------------------------------------------------------------------
+$social: (
+	twitter: 		#78cdf0,
+	facebook: 		#537bbd,
+	instagram: 		#517fa4,
+	youtube: 		#d34836,
+	snapchat: 		#fffc00,
+	pinterest:		#cb2027,
+	google: 		#dd4b39
+)
