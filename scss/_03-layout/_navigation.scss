@@ -1,51 +1,91 @@
 nav {
-    > ul {
-        // margin-right: 1em;
+    &.main {
+        > ul {
+            // margin-right: 1em;
 
-        @include media($screen-xs) {}
+            @include media($screen-xs) {}
 
 
-        @include media($screen-xsm) {
-            margin-bottom: 3em;
+            @include media($screen-xsm) {
+                margin-bottom: 3em;
+            }
+
+
+            @include media($screen-sm) {}
+
+
+            @include media($screen-smd) {}
+
+
+            @include media($screen-md) {}
+
+
+            @include media($screen-lg) {}
+
+
+            @include media($screen-xl) {
+                margin-right: 0;
+            }
         }
 
-
-        @include media($screen-sm) {}
-
-
-        @include media($screen-smd) {}
-
-
-        @include media($screen-md) {}
-
-
-        @include media($screen-lg) {}
-
-
-        @include media($screen-xl) {
-            margin-right: 0;
-        }
-    }
-
-    ul {
-        > li {
-            // only parent list items
-            a {
-                font-size: 2.1em;
-                letter-spacing: 1px;
-                color: $white;
-
-                @include media($screen-xs) {
-                    font-size: 1.4em;
+        ul {
+            > li {
+                // only parent list items
+                a {
+                    font-size: 2.1em;
                     letter-spacing: 1px;
-                    color: $link-color;
-                }
+                    color: $white;
+
+                    @include media($screen-xs) {
+                        font-size: 1.4em;
+                        letter-spacing: 1px;
+                        color: $link-color;
+                    }
 
 
-                @include media($screen-xsm) {
-                    font-size: 1.7em;
-                    letter-spacing: 1px;
+                    @include media($screen-xsm) {
+                        font-size: 1.7em;
+                        letter-spacing: 1px;
+                    }
+
+
+                    @include media($screen-sm) {}
+
+
+                    @include media($screen-smd) {}
+
+
+                    @include media($screen-md) {}
+
+
+                    @include media($screen-lg) {
+                        font-size: 2em;
+                        letter-spacing: 1px;
+                    }
+
+
+                    @include media($screen-xl) {
+                        font-size: 2.2em;
+                        letter-spacing: 1px;
+                    }
                 }
+            }
+
+            li {
+                // every list item
+                margin: 0;
+                list-style-type: none;
+            }
+
+            .nav-divide {
+                border-right: 1px solid $gray;
+                display: block;
+                height: 30px;
+
+                @include media($screen-xs) {}
+
+
+                @include media($screen-xsm) {}
 
 
                 @include media($screen-sm) {}
@@ -58,50 +98,21 @@ nav {
 
 
                 @include media($screen-lg) {
-                    font-size: 2em;
-                    letter-spacing: 1px;
+                    height: 50px;
                 }
 
 
-                @include media($screen-xl) {
-                    font-size: 2.2em;
-                    letter-spacing: 1px;
-                }
+                @include media($screen-xl) {}
             }
         }
+    }
 
-        li {
-            // every list item
-            margin: 0;
-            list-style-type: none;
-        }
-
-        .nav-divide {
-            border-right: 1px solid $gray;
-            display: block;
-            height: 30px;
-
-            @include media($screen-xs) {}
-
-
-            @include media($screen-xsm) {}
-
-
-            @include media($screen-sm) {}
-
-
-            @include media($screen-smd) {}
-
-
-            @include media($screen-md) {}
-
-
-            @include media($screen-lg) {
-                height: 50px;
+    &.subnav {
+        ul {
+            li {
+                list-style-type: none;
+                margin: 0;
             }
-
-
-            @include media($screen-xl) {}
         }
     }
 }

@@ -1,6 +1,6 @@
-$formbordercolor: black;
-$formtextcolor: black;
-$formplaceholdercolor: blue;
+$formbordercolor: map-get($gold, main);
+$formtextcolor: map-get($gold, main);
+$formplaceholdercolor: map-get($gold, main);
 
 $forminvalidbackground: red;
 $forminvalidcolor: white;
@@ -8,7 +8,7 @@ $forminvalidcolor: white;
 $formsuccessbackground: orange;
 $formsuccesstextcolor: white;
 
-$formbuttonbackground: orange;
+$formbuttonbackground: transparent;
 $formbuttoncolor: white;
 
 fieldset {
@@ -32,18 +32,19 @@ input,
 select,
 textarea,
 #{$all-text-inputs},[type="submit"] {
-    font-size: 1.1rem;
-    font-family: $base-sans-font;
+    font-size: 0.7rem;
+    font-family: $acumin;
     color: $formtextcolor;
     appearance: none;
-
     border: 1px solid $formbordercolor;
     border-radius: 0 !important;
     box-shadow: none;
     box-sizing: border-box;
-    padding: 12px 14px;
+    padding: 10px;
     transition: color .2s ease-in-out;
-    letter-spacing: 1px;
+    letter-spacing: 0;
+    font-weight: 600;
+    text-transform: uppercase;
 
     &:focus {
         transition: color .2s ease-in-out;

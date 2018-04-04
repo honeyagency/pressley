@@ -49,3 +49,41 @@ function prepareHomepageFields()
     );
     return $home;
 }
+function prepareSiteOptions()
+{
+    $social = array(
+        'facebook'  => get_field('field_5ab55eb677bbd', 'options'),
+        'instagram' => get_field('field_5ab55ebc77bbe', 'options'),
+        'title'     => get_field('field_5ab5636c25e4f', 'options'),
+        'signup'    => get_field('field_5ab55f38f5617', 'options'),
+    );
+
+    if (have_rows('field_5ab55f1103bf4', 'options')) {
+        $nav = array();
+        while (have_rows('field_5ab55f1103bf4', 'options')) {
+            the_row();
+            $nav[] = get_sub_field('field_5ab55f1a03bf5', 'options');
+        }
+    } else {
+        $nav = null;
+    }
+
+    if (have_rows('field_5ab55f2603bf6', 'options')) {
+        $store = array();
+        while (have_rows('field_5ab55f2603bf6', 'options')) {
+            the_row();
+            $store[] = get_sub_field('field_5ab55f2603bf7', 'options');
+        }
+    } else {
+        $store = null;
+    }
+    $footer = array(
+        'navigation' => $nav,
+        'store'      => $store,
+    );
+    $options = array(
+        'social' => $social,
+        'footer' => $footer,
+    );
+    return $options;
+}

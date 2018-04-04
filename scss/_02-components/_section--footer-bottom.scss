@@ -1,0 +1,19 @@
+.section--footer-bottom {
+    border: 0 !important;
+    order: 99;
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+
+        li {
+            margin: 0;
+        }
+
+        .nav-divide {
+            border-right: 1px solid $gray;
+            display: block;
+            height: 12px;
+        }
+    }
+}

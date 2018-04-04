@@ -1,0 +1,5 @@
+<section class="block--footer-nav-1 grid--third grid--sm-fifth grid--md-seventh">
+	{% for link in options.footer.navigation %}
+		<a href="{{link.url}}" class="font--small font--din color--black text--uppercase block" title="{{link.title}}" target="{{link.target}}">{{link.title}}</a>
+	{% endfor %}
+</section>

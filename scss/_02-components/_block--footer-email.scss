@@ -1,0 +1,21 @@
+.block--footer-email {
+    .mc-field-group {
+        position: relative;
+
+        .email {
+            width: 100%;
+        }
+
+        .icon-angle-right {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            height: 38px;
+            width: 38px;
+            transform: translateY(-50%);
+            background-size: 20%;
+            border: 0;
+            background-position: center;
+        }
+    }
+}

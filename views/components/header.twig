@@ -1,5 +1,8 @@
 <header class="header flex flex--wrap justify--between max-wrap margin--center align--items-center">
-	{% include 'components/navigation.twig' %}
+	<div class="navwrap grid--one grid--xs-three-fifths grid--sm-two-fifths grid--md-third">
+	{% include 'components/sub-navigation.twig' %}
+	{% include 'components/navigation.twig' %}	
+</div>
 	<label class="menu--trigger"><span></span></label>
 	<h1 class="grid--half grid--xs-two-fifths grid--md-third"><a class="hdr-logo-link" href="/" rel="home"><i class="logdesk icon-logo" data-grunticon-embed>{{site.name}}</i></a></h1>
 </header>

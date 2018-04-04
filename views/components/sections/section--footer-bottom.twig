@@ -1,0 +1,20 @@
+<section class="section--footer-bottom grid--one spacing--vert-2" role="navigation">
+	<ul class="flex flex--wrap justify--center text--center align--items-baseline">
+		{% for item in footermenu.get_items %}
+			<li class="nav-item {{item.classes | join(' ')}}">
+				<a class="nav-link text--uppercase color--gray-border font--tiny letter--1 spacing--horiz-1"  href="{{item.get_link}}">{{item.title}}</a>
+				{% if item.get_children %}
+					<ul class="nav nav-drop">
+						{% for child in item.get_children %}
+							<li class="nav-drop-item">
+								<a class="nav-link" href="{{child.get_link}}">{{child.title}}</a>
+							</li>
+						{% endfor %}
+					</ul>
+				{% endif %}
+			</li>
+			<span class="text--uppercase  nav-divide"></span>
+		{% endfor %}
+	<span class="nav-link text--uppercase color--gray-border font--tiny letter--1 spacing--horiz-1">&copy; {{now|date('Y')}} {{site.title}} All Rights Reserved</span>	
+	</ul>
+</nav>

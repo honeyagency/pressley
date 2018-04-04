@@ -1,5 +1,14 @@
 .section--footer {
+    section {
+        border-left: 1px solid $bordergray;
+        padding-left: 0.5em;
+        box-sizing: border-box;
+    }
+
     .block--footer-logo {
+        border: 0;
+        padding-left: 0;
+
         i {
             display: block;
             margin: 0 auto;

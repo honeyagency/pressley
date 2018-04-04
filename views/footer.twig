@@ -1,10 +1,9 @@
 <footer class="section--footer flex flex--wrap justify--between spacing--gutter max-wrap margin--center">
-	
-	<section class="block--footer-nav-1 grid--third grid--sm-fifth grid--md-seventh">block--footer-nav</section>
-	<section class="block--footer-nav-2 grid--third grid--sm-fifth grid--md-seventh">block--footer-nav</section>
-	<section class="block--footer-social grid--third grid--sm-fifth grid--md-seventh">block--footer-social</section>
-	<section class="block--footer-logo grid--half grid--sm-fourth grid--md-third"><i class="icon-logo-noseal" data-grunticon-embed></i></section>
-	<section class="block--footer-email grid--third grid--sm-two-fifths grid--md-fourth">block--footer-email</section>
-
-	{# Copyright {{"now"|date('Y')}} #}
+	{% include 'components/blocks/block--footer-nav.twig' %}
+	{% include 'components/blocks/block--footer-store.twig' %}
+	{% include 'components/blocks/block--footer-social.twig' %}
+<section class="block--footer-logo grid--half grid--sm-fourth grid--md-third"><i class="icon-logo-noseal" data-grunticon-embed></i></section>
+	{% include 'components/blocks/block--footer-email.twig' %}
+{# Copyright {{"now"|date('Y')}} #}
+{% include 'components/sections/section--footer-bottom.twig' %}
 </footer>
