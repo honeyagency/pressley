@@ -11,9 +11,9 @@
 			<i class="icon-logo-letters grid--half grid--md-third block margin--center margin--vert-2" data-grunticon-embed></i>
 			
 		</section>
-		<section class="flex flex--wrap margin--center justify--between spacing--gutter med-wrap" id="meet">
+		<section class="flex flex--double flex--wrap margin--center justify--between spacing--gutter med-wrap" id="meet">
 			{% for person in story.team %}
-				<div class="grid--one grid--sm-two-fifths">
+				<div class="grid--one grid--half">
 					<img src="{{person.image|resize(100)}}" data-original="{{person.image|resize(1040)}}" alt="{{person.name.first}} {{person.name.last}}" />
 					<h4 class="color--gold font--din text--uppercase margin--top-1">{{person.name.first}} {{person.name.last}}</h4>
 					<div class="font--small">{{person.description}}</div>

@@ -1,0 +1,18 @@
+{% extends "base.twig" %}
+{% block content %}
+	<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
+		
+		<section class="flex flex--double flex--wrap margin--center justify--between spacing--gutter med-wrap spacing--vert-5">
+			{% for wine in wines %}
+				<div class="grid--one grid--half text--center ">
+
+						<img src="{{wine.wine.images.wines|resize(100)}}" data-original="{{wine.wine.images.wines|resize(1060)}}" alt="{{wine.title}}" class="margin--bot-3" >
+					<h2 class="color--gold font--din text--uppercase">{{wine.title}}</h2>
+					{% if wine.wine.details.vintage %}<div class="font--din text--uppercase">Vintage {{wine.wine.details.vintage}}</div>{% endif %}
+						<a href="{{wine.link}}" title="{{wine.title}}"  class="button">Details <i class="icon-angle-right" data-grunticon-embed></i></a>
+				</div>
+			{% endfor %}
+		
+		</section>
+	</article>
+{% endblock %}

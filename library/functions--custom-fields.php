@@ -131,12 +131,12 @@ function prepareVinesFields()
 function prepareStoryFields()
 {
     $intro = array(
-        'title'   => get_field('field_5accf7ce8c5c4'),
+        'title'       => get_field('field_5accf7ce8c5c4'),
         'description' => get_field('field_5accf7ce8c5d1'),
     );
 
     $brand = array(
-        'title'   => get_field('field_5accf7fb92a3c'),
+        'title'       => get_field('field_5accf7fb92a3c'),
         'description' => get_field('field_5accf96c92a3d'),
     );
 
@@ -181,4 +181,23 @@ function prepareStoryFields()
         'moose' => $moose,
     );
     return $story;
+}
+function prepareWine()
+{
+    $details = array(
+        'vintage' => get_field('field_5acd24818ef9a'),
+    );
+    $winesPageImageId = get_field('field_5acd293405fd6');
+    $winesPageImage   = null;
+    if (!empty($winesPageImageId)) {
+        $winesPageImage = new TimberImage($winesPageImageId);
+    }
+    $images = array(
+        'wines' => $winesPageImage,
+    );
+    $wine = array(
+        'details' => $details,
+        'images'  => $images,
+    );
+    return $wine;
 }
