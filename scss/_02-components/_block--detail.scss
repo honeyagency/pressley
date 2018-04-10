@@ -1,0 +1,35 @@
+.block--detail {
+    h3 {
+        @include media($max-xs) {}
+
+
+        @include media($max-xsm) {}
+
+
+        @include media($max-sm) {}
+
+
+        @include media($max-smd) {}
+
+
+        @include media($max-md) {
+            text-align: left;
+        }
+
+
+        @include media($max-lg) {}
+
+
+        @include media($max-xl) {}
+    }
+
+    p {
+        font-size: .95em;
+        margin-bottom: 0;
+
+        @include media($screen-md) {
+            border-left: 1px solid map-get($gold, main);
+            padding-left: 1em;
+        }
+    }
+}

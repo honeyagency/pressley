@@ -1,0 +1,7 @@
+<section class="section--vine-land article-content content-wrap margin--center spacing--vert-4 spacing--gutter">
+	<h2 class=" text--center font--din text--uppercase color--gold">{{land.title}}</h2>
+	<div>{{land.description}}</div>
+	{% for detail in land.details %}
+		{% include 'components/blocks/block--detail.twig' %}
+	{% endfor %}
+</section>

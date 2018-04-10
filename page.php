@@ -27,6 +27,10 @@ if (is_front_page() == true) {
     $context['home'] = prepareHomepageFields();
 } elseif (is_page(9)) {
 
+} elseif (is_page(11)) {
+    $context['vines'] = prepareVinesFields();
+}elseif (is_page(12)) {
+    $context['story'] = prepareStoryFields();
 }
 $context['post'] = $post;
 Timber::render(array('page-' . $post->post_name . '.twig', 'page.twig'), $context);

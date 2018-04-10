@@ -35,18 +35,31 @@
 .align--items-center {
     align-items: center;
 }
+
 .align--items-baseline {
     align-items: baseline;
 }
-// 
+
+//
 // Grid
 //
-
 .max-wrap {
     max-width: $max-wrap;
     box-sizing: content-box;
 }
+.huge-wrap{
+    max-width: 1440px;
+    
+}
 
+.content-wrap {
+    max-width: $content-wrap;
+    box-sizing: content-box;
+}
+.med-wrap{
+    max-width: 1120px;
+    box-sizing: content-box;
+}
 .margin--center {
     margin: 0 auto;
 }
@@ -92,9 +105,11 @@
         display: none !important;
     }
 }
-.order--1{
-    order:1;
+
+.order--1 {
+    order: 1;
 }
-.order--2{
-    order:2;
+
+.order--2 {
+    order: 2;
 }

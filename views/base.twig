@@ -8,8 +8,8 @@
 {% block header %}
 	{% include 'components/header.twig' %}
 {% endblock %}
-<main role="main" class="content-wrapper margin--center max-wrap">
-	{% if title %}<h1>{{title}}</h1>{% endif %}
+<main role="main" class="content-wrapper margin--center huge-wrap">
+	{% include 'components/sections/section--header.twig' %}
 	{% block content %}
 		Sorry, no content
 	{% endblock %}

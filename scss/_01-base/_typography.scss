@@ -48,7 +48,10 @@ h2, .h2 {
 
 h3, .h3 {
     font-size: 0.85em;
-    letter-spacing: 1.6px;
+    letter-spacing: 1px;
+    &.font--din{
+        font-size: 1.3em;
+    }
 }
 
 h4, .h4 {

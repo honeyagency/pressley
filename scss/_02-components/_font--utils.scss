@@ -107,3 +107,11 @@ p.font--large {
 .letter--3 {
     letter-spacing: 3px;
 }
+hr{
+    &.inline{
+
+width: 160px;
+    }
+    border: 0;
+    border-bottom: 1px solid;
+}

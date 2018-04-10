@@ -1,0 +1,34 @@
+{% extends "base.twig" %}
+{% block content %}
+	<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
+		<section class="article-content content-wrap margin--center spacing--vert-4 spacing--gutter">
+			
+			<h1 class="text--center h2 font--din color--gold text--uppercase">{{story.intro.title}}</h1>
+			<div class="text--center">{{story.intro.description}}</div>
+			<hr class="color--gold-dark inline margin--vert-3">
+			<h2 class="text--center h2 font--din color--gold text--uppercase">{{story.brand.title}}</h2>
+			<div class="text--center">{{story.brand.description}}</div>
+			<i class="icon-logo-letters grid--half grid--md-third block margin--center margin--vert-2" data-grunticon-embed></i>
+			
+		</section>
+		<section class="flex flex--wrap margin--center justify--between spacing--gutter med-wrap" id="meet">
+			{% for person in story.team %}
+				<div class="grid--one grid--sm-two-fifths">
+					<img src="{{person.image|resize(100)}}" data-original="{{person.image|resize(1040)}}" alt="{{person.name.first}} {{person.name.last}}" />
+					<h4 class="color--gold font--din text--uppercase margin--top-1">{{person.name.first}} {{person.name.last}}</h4>
+					<div class="font--small">{{person.description}}</div>
+					<div class="block--person grid--sm-half grid--md-two-fifths">
+						<i class="icon-sig-{{person.name.first|lower}}" data-grunticon-embed></i>
+						<hr class="color--gray">
+						<div class="font--bold text--uppercase color--gray font--small">{{person.name.first}}</div>
+						<div class="font--tiny">{{person.title}}</div>
+					</div>
+				</div>
+			{% endfor %}
+			<div style="background-image:url('{{story.moose.image}}');" class="moose grid--one margin--top-4 bgimg spacing--gutter spacing--vert-4">
+				<h2 class="font--fancy-af h1 color--white">{{story.moose.title}}</h2>
+					<div class="grid--one grid--md-half color--white  font--small">{{story.moose.description}}</div>
+				</div>
+		</section>
+	</article>
+{% endblock %}

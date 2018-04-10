@@ -31,7 +31,17 @@
         @include media($screen-xl) {}
 
 
-        .block--person {
+  
+    }
+
+    .bgimg {
+        @include media($max-sm) {
+            min-height: 350px;
+            background-position: top center;
+        }
+    }
+}
+      .block--person {
             i {
                 height: 50px;
                 width: auto;
@@ -46,14 +56,14 @@
                     transform: translateY(-50%);
                 }
 
-                &.icon-sig-brit {
+                &.icon-sig-brittany {
                     svg {
                         height: 80px;
                         width: auto;
                     }
                 }
 
-                &.icon-sig-char {
+                &.icon-sig-charlie {
                     svg {
                         height: 50px;
                         width: auto;
@@ -61,12 +71,3 @@
                 }
             }
         }
-    }
-
-    .bgimg {
-        @include media($max-sm) {
-            min-height: 350px;
-            background-position: top center;
-        }
-    }
-}

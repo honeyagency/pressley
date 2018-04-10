@@ -87,3 +87,98 @@ function prepareSiteOptions()
     );
     return $options;
 }
+
+function prepareVinesFields()
+{
+
+    if (have_rows('field_5ac66e7bdf21c')) {
+        $land = array();
+        while (have_rows('field_5ac66e7bdf21c')) {
+            the_row();
+            if (have_rows('field_5ac66eacdf21f')) {
+                $details = array();
+                while (have_rows('field_5ac66eacdf21f')) {
+                    the_row();
+                    $details[] = array(
+                        'title'   => get_sub_field('field_5ac66eb8df220'),
+                        'content' => get_sub_field('field_5ac66ec3df221'),
+                    );
+                }
+            }
+            $land[] = array(
+                'title'       => get_sub_field('field_5ac66e98df21d'),
+                'description' => get_sub_field('field_5ac66ea0df21e'),
+                'details'     => $details,
+            );
+
+        }
+    }
+    $landImageId = get_field('field_5ac68ec3b9390');
+    $landImage   = null;
+    if (!empty($landImageId)) {
+        $landImage = new TimberImage($landImageId);
+    }
+    $vines = array(
+        'title'       => get_field('field_5ac66dfedf217'),
+        'description' => get_field('field_5ac66e0edf218'),
+        'map'         => get_field('field_5ac66e50df21a'),
+        'image'       => $landImage,
+        'land'        => $land,
+    );
+    return $vines;
+}
+
+function prepareStoryFields()
+{
+    $intro = array(
+        'title'   => get_field('field_5accf7ce8c5c4'),
+        'description' => get_field('field_5accf7ce8c5d1'),
+    );
+
+    $brand = array(
+        'title'   => get_field('field_5accf7fb92a3c'),
+        'description' => get_field('field_5accf96c92a3d'),
+    );
+
+    if (have_rows('field_5accf97c92a3e')) {
+        $team = array();
+        while (have_rows('field_5accf97c92a3e')) {
+            the_row();
+            $teamImageId = get_sub_field('field_5accf99c92a3f');
+            $teamImage   = null;
+            if (!empty($teamImageId)) {
+                $teamImage = new TimberImage($teamImageId);
+            }
+            $team[] = array(
+                'image'       => $teamImage,
+                'title'       => get_sub_field('field_5accf9ac92a40'),
+                'name'        => array(
+                    'first' => get_sub_field('field_5accf9e592a42'),
+                    'last'  => get_sub_field('field_5accfa2d829c9'),
+                ),
+
+                'description' => get_sub_field('field_5accf9b392a41'),
+            );
+        }
+    } else {
+        $team = null;
+    }
+
+    $mooseImageId = get_field('field_5accfa4f829cb');
+    $mooseImage   = null;
+    if (!empty($mooseImageId)) {
+        $mooseImage = new TimberImage($mooseImageId);
+    }
+    $moose = array(
+        'image'       => $mooseImage,
+        'title'       => get_field('field_5accfa63829cc'),
+        'description' => get_field('field_5accfa79829cd'),
+    );
+    $story = array(
+        'intro' => $intro,
+        'brand' => $brand,
+        'team'  => $team,
+        'moose' => $moose,
+    );
+    return $story;
+}
