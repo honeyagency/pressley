@@ -9,7 +9,9 @@
 				<hr class="color--gold-dark inline margin--vert-3"> 
 				
 			</section>
-			{% include 'components/sections/section--vine-map.twig' %}
+			{% if vines.map %}
+	<div class="content-wrap margin--center"><img src="{{vines.map|resize(100)}}" data-original="{{vines.map|resize(1320)}}" width="100%" alt=""></div>
+{% endif %}
 			<section class="section--land-wrap" style="background-image:url('{{vines.image}}')">
 			{% for land in vines.land %}
 				{% include 'components/sections/section--vine-land.twig' %}

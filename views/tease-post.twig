@@ -1,9 +1,20 @@
 {% extends "tease.twig" %}
-
 {% block content %}
-	<h2 class="h2"><a href="{{post.link}}">{{post.title}}</a></h2>
-		<p>{{post.get_preview(25)}}</p>
-		{% if post.thumbnail.src %}
-			<img src="{{post.thumbnail.src}}" />
+	
+{% if loop.index == 1 %}<article class="tease grid--one margin--bot-2 tease-{{post.post_type}}" id="tease-{{post.ID}}">{% include 'components/sections/section--blog-header.twig' %}</article>
+{% else %}
+<article class="tease margin--bot-2 tease-{{post.post_type}} grid--sm-half" id="tease-{{post.ID}}">
+	{% if loop.index == 1 %}
+			<a href="{{post.guid}}" class="color--white"><h1 class="color--white">{{post.post_title}}</h1></a>
+			{% if post.thumbnail %}<img width="100%" src="{{post.thumbnail.src|resize(320,120)}}" data-original="{{post.thumbnail.src|resize(1280, 480)}}" alt="{{post.thumbnail.src.caption}}" data-original-set="{{post.thumbnail.src|resize(640, 240)}}  640w,{{post.thumbnail.src|resize(750, 281)}}  750w,{{post.thumbnail.src|resize(1080,405)}} 1080w,{{post.thumbnail.src|resize(1280, 480)}} 1280w,{{post.thumbnail.src|resize(1366,512)}} 1366w,{{post.thumbnail.src|resize(1440,540)}} 1440w,{{post.thumbnail.src|resize(1707,640)}} 1920w, {{post.thumbnail.src|resize(2560,960)}} 2880w" sizes="100vw">
+			{% endif %}
+		{% else %}
+			{% if post.thumbnail %}<img width="100%" src="{{post.thumbnail.src|resize(160,120)}}" data-original="{{post.thumbnail.src|resize(640, 480)}}" alt="{{post.thumbnail.src.caption}}" data-original-set="{{post.thumbnail.src|resize(320, 240)}}  640w,{{post.thumbnail.src|resize(375, 281)}}  750w,{{post.thumbnail.src|resize(540,405)}} 1080w,{{post.thumbnail.src|resize(640, 480)}} 1280w,{{post.thumbnail.src|resize(683,512)}} 1366w,{{post.thumbnail.src|resize(720,540)}} 1440w,{{post.thumbnail.src|resize(853,640)}} 1920w, {{post.thumbnail.src|resize(1280,960)}} 2880w" sizes="50vw">
 		{% endif %}
+			<h2 class="margin--top-1">{{post.post_title}}</h2>
+		{% endif %}
+
+	<p>{{post.get_preview}}</p>
+</article>
+{% endif %}
 {% endblock %}

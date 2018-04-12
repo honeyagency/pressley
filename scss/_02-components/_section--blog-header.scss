@@ -1,0 +1,15 @@
+.section--blog-header {
+    position: relative;
+
+    h1 {
+        position: absolute;
+        left: .5em;
+        z-index: 9;
+        bottom: .5em;
+
+    }
+
+    img {
+        position: relative;
+    }
+}

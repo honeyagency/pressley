@@ -1,0 +1,5 @@
+.section--wine-details {
+    @include media($screen-sm) {
+        border-left: 1px solid map-get($gold, main);
+    }
+}

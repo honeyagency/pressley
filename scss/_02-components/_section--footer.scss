@@ -1,7 +1,14 @@
 .section--footer {
     section {
-        border-left: 1px solid $bordergray;
+        @include media($screen-xs){}
+        @include media($screen-sm){
+            border-left: 1px solid $bordergray;
         padding-left: 0.5em;
+            
+        }
+        @include media($screen-md){}
+        @include media($screen-lg){}
+        @include media($screen-xl){}
         box-sizing: border-box;
     }
 

@@ -9,7 +9,11 @@
 	{% include 'components/header.twig' %}
 {% endblock %}
 <main role="main" class="content-wrapper margin--center huge-wrap">
-	{% include 'components/sections/section--header.twig' %}
+	{% if post.post_type == 'post' %}
+		{% include 'components/sections/section--blog-header.twig' %}
+	{% else %}
+		{% include 'components/sections/section--header.twig' %}
+	{% endif %}
 	{% block content %}
 		Sorry, no content
 	{% endblock %}

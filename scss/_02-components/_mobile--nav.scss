@@ -26,9 +26,8 @@ nav {
 
 .menu--trigger {
     @include media($max-xs) {
-        width: 24px;
-        height: 24px;
-        margin-top: -0.6em;
+        width: 20px;
+        height: 20px;
         position: relative;
         z-index: 99999999;
         display: block;
@@ -97,12 +96,12 @@ body {
                 }
 
                 &:before {
-                    transform: translateY(11px) rotate(45deg);
+                    transform: translateY(9px) rotate(45deg);
                 }
 
                 &:after {
                     transform: rotate(45deg);
-                    transform: translateY(-11px) rotate(-45deg);
+                    transform: translateY(-9px) rotate(-45deg);
                 }
 
                 span {

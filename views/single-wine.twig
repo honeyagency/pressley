@@ -1,0 +1,38 @@
+{% extends "base.twig" %}
+{% block content %}
+	
+	<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
+		
+		<section class="flex flex--wrap margin--center justify--center align--items-center spacing--gutter med-wrap spacing--vert-2 spacing--dsk-vert-5">
+			<div class="grid--half grid--sm-third">
+				<img src="{{wine.images.bottle|resize(100)}}" data-original="{{wine.images.bottle|resize(720)}}" alt="{{wine.title}}" width="330" class="block margin--center" >
+			</div>
+			<div class="section--wine-details grid--one grid--sm-two-fifths spacing--vert-2 spacing--dsk-horiz-2">
+				<h1 class="color--gold font--din">{{wine.details.vintage}} {{post.title|upper}}</h1>
+				{{post.content}}
+				<div class="block--details">
+					<span class="font--large">{{wine.details.cost}}</span><span class="color--gray-border spacing--horiz-half">{{wine.details.volume}}</span>
+				</div>
+				<br>
+				<div id="product"></div>
+			</div>
+		</section>
+		<div class="bg--gray-light border-box grid--one spacing--gutter flex flex--wrap justify--between align--items-center spacing--vert-2 med-wrap margin--center">
+			<h6 class="grid--one text--center font--sans text--uppercase color--gray">Pairs Well With</h6>
+			{% for icon in wine.icons %}
+				<div class="pair--icon flex flex--wrap justify--between align--items-center spacing--vert-1">
+					<i class="icon-{{icon.class}}" data-grunticon-embed></i>
+					<span class="font--din text--uppercase font--medium spacing--horiz-half">{{icon.text|upper}}</span>
+				</div>
+			{% endfor %}
+		</div>
+		<div class="text--center">
+			<a href="{{site.url}}/wines" title="See All Wines" class="border--1 text--center text--uppercase font--bold margin--center margin--vert-2 inline-block spacing--horiz-1 spacing--vert-1">See All Wines</a>
+		</div>
+	</article>
+	{% if wine.details.button %}
+		<script type="text/javascript">
+		{% include 'components/sections/section--productjs.twig' %}
+		</script>
+	{% endif %}
+{% endblock %}

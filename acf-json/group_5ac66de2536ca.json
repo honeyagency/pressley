@@ -73,10 +73,10 @@
             "endpoint": 0
         },
         {
-            "key": "field_5ac66e50df21a",
+            "key": "field_5ace6f96ea44e",
             "label": "Map",
-            "name": "google_map_field",
-            "type": "google_map",
+            "name": "map_image",
+            "type": "image",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -85,10 +85,16 @@
                 "class": "",
                 "id": ""
             },
-            "center_lat": "",
-            "center_lng": "",
-            "zoom": "",
-            "height": ""
+            "return_format": "id",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
         },
         {
             "key": "field_5ac66e69df21b",
@@ -268,5 +274,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1522962155
+    "modified": 1523478438
 }

@@ -13,7 +13,11 @@
 					</ul>
 				{% endif %}
 			</li>
-			{% if loop.last %}{% else %}<span class=""></span>{% endif %}
+			{% if loop.last %}
+				<li class="spacing--horiz-half nav-item hidden--mob">
+					<span id="cart-toggle"></span>
+				</li>
+				{% else %}<span class=""></span>{% endif %}
 		{% endfor %}
 	</ul>
 	</nav><!-- #nav -->

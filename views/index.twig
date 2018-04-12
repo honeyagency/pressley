@@ -1,9 +1,8 @@
 {% extends "base.twig" %}
-
 {% block content %}
-	<h2>{{foo}}</h2>
-	<p>{{qux}}</p>
-	{% for post in posts %}
-		{% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
-	{% endfor %}
+	<section class="max-wrap margin--center flex flex--double flex--wrap justify--between spacing--gutter">
+		{% for post in posts %}
+			{% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
+		{% endfor %}
+	</section>
 {% endblock %}

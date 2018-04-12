@@ -1,9 +1,11 @@
 .color--gold {
     color: map-get($gold, main);
 }
+
 .color--gold-dark {
     color: map-get($gold, dark);
 }
+
 .color--gold-faded {
     color: map-get($gold, faded);
 }
@@ -11,6 +13,11 @@
 .color--gray {
     color: $gray;
 }
+
+.color--gray-light {
+    color: $lightgray;
+}
+
 .color--gray-border {
     color: $bordergray;
 }

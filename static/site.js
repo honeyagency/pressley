@@ -15,5 +15,9 @@ jQuery(document).ready(function($) {
             event.preventDefault();
             $('body').toggleClass('open');
         });
+        cart = $('#cart-toggle');
+        $('#cart-toggle').remove();
+        $('.mobtoggle').html(cart);
+        
     } else {}
 });

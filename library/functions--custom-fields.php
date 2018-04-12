@@ -118,10 +118,15 @@ function prepareVinesFields()
     if (!empty($landImageId)) {
         $landImage = new TimberImage($landImageId);
     }
+    $mapImageId = get_field('field_5ace6f96ea44e');
+    $mapImage   = null;
+    if (!empty($mapImageId)) {
+        $mapImage = new TimberImage($mapImageId);
+    }
     $vines = array(
         'title'       => get_field('field_5ac66dfedf217'),
         'description' => get_field('field_5ac66e0edf218'),
-        'map'         => get_field('field_5ac66e50df21a'),
+        'map'         => $mapImage,
         'image'       => $landImage,
         'land'        => $land,
     );
@@ -186,18 +191,39 @@ function prepareWine()
 {
     $details = array(
         'vintage' => get_field('field_5acd24818ef9a'),
+        'cost'    => get_field('field_5acd349f07a96'),
+        'volume'  => get_field('field_5acd34ab07a97'),
+        'button'  => get_field('field_5acd33d9a6f7d'),
     );
     $winesPageImageId = get_field('field_5acd293405fd6');
     $winesPageImage   = null;
     if (!empty($winesPageImageId)) {
         $winesPageImage = new TimberImage($winesPageImageId);
     }
+    $bottleImageId = get_field('field_5acd2f0ab8928');
+    $bottleImage   = null;
+    if (!empty($bottleImageId)) {
+        $bottleImage = new TimberImage($bottleImageId);
+    }
+    if (have_rows('field_5ace656628d70')) {
+        $icons = array();
+        while (have_rows('field_5ace656628d70')) {
+            the_row();
+            $icons[] = array(
+                'class' => get_sub_field('field_5ace657428d71'),
+                'text'  => get_sub_field('field_5ace657e28d72'),
+            );
+        }
+    }
+
     $images = array(
-        'wines' => $winesPageImage,
+        'wines'  => $winesPageImage,
+        'bottle' => $bottleImage,
     );
     $wine = array(
         'details' => $details,
         'images'  => $images,
+        'icons'   => $icons,
     );
     return $wine;
 }
