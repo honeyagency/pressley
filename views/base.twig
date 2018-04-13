@@ -5,11 +5,12 @@
 </head>
 {% endblock %}
 <body class="{{body_class}}" data-template="base.twig">
-{% block header %}
-	{% include 'components/header.twig' %}
 	{% if cookie != true %}
 		{% include 'components/sections/section--age-gate.twig' %}
 	{% endif %}
+{% block header %}
+	{% include 'components/header.twig' %}
+	
 {% endblock %}
 <main role="main" class="content-wrapper margin--center huge-wrap">
 	{% if post.post_type == 'post' %}
