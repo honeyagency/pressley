@@ -84,6 +84,7 @@ function prepareSiteOptions()
     $options = array(
         'social' => $social,
         'footer' => $footer,
+        'age'    => get_field('field_5ad12e27daa3d', 'options'),
     );
     return $options;
 }

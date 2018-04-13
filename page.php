@@ -23,6 +23,12 @@
 
 $context = Timber::get_context();
 $post    = new TimberPost();
+
+if (!isset($_COOKIE['sawthegate'])) {
+    $context['cookie'] = false;
+} else {
+    $context['cookie'] = true;
+}
 if (is_front_page() == true) {
     $context['home'] = prepareHomepageFields();
 } elseif (is_page(9)) {

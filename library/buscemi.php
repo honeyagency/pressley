@@ -89,3 +89,17 @@ if (function_exists('acf_add_options_page')) {
 
 require_once 'functions--custom-fields.php';
 require_once 'functions--custom-posts.php';
+
+
+
+
+add_action('init', 'ageGate');
+
+// ageGate() set the cookie on the domain and directory WP is installed on
+function ageGate(){
+  $path = parse_url(get_option('siteurl'), PHP_URL_PATH);
+  $host = parse_url(get_option('siteurl'), PHP_URL_HOST);
+  $expiry = strtotime('+1 month');
+  setcookie('sawthegate', true, $expiry, $path, $host);
+
+}
