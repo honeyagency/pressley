@@ -13,7 +13,7 @@
 		</section>
 		<section class="flex flex--double flex--wrap margin--center justify--between spacing--gutter med-wrap" id="meet">
 			{% for person in story.team %}
-				<div class="grid--one grid--half">
+				<div class="grid--one grid--sm-half">
 					<img src="{{person.image|resize(100)}}" data-original="{{person.image|resize(1040)}}" alt="{{person.name.first}} {{person.name.last}}" />
 					<h4 class="color--gold font--din text--uppercase margin--top-1">{{person.name.first}} {{person.name.last}}</h4>
 					<div class="font--small">{{person.description}}</div>
