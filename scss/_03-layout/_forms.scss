@@ -116,6 +116,10 @@ select {
     overflow: hidden;
 }
 
+.gform_wrapper label {
+    @extend .screenreader;
+}
+
 .wpcf7-form-control-wrap {
     width: 100%;
     margin-bottom: 1em;
@@ -175,6 +179,7 @@ div.wpcf7-mail-sent-ok {
 
 button, [type="submit"] {
     background-color: $formbuttonbackground;
+
     // color: $formbuttoncolor;
     letter-spacing: 3px;
     text-transform: uppercase;
