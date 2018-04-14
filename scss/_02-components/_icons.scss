@@ -10,3 +10,12 @@
         }
     }
 }
+.icon-logo-letters{
+	svg{
+		path{
+			&:nth-of-type(2){
+fill:map-get($gold, main);
+			}
+		}
+	}
+}
