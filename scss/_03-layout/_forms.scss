@@ -116,8 +116,10 @@ select {
     overflow: hidden;
 }
 
-.gform_wrapper label {
-    @extend .screenreader;
+.gform_wrapper {
+    label {
+        @extend .screenreader;
+    }
 }
 
 .wpcf7-form-control-wrap {
