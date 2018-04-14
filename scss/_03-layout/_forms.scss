@@ -32,19 +32,19 @@ input,
 select,
 textarea,
 #{$all-text-inputs},[type="submit"] {
-    font-size: 0.7rem;
-    font-family: $acumin;
-    color: $formtextcolor;
-    appearance: none;
-    border: 1px solid $formbordercolor;
-    border-radius: 0 !important;
-    box-shadow: none;
-    box-sizing: border-box;
-    padding: 10px;
-    transition: color .2s ease-in-out;
-    letter-spacing: 0;
-    font-weight: 600;
-    text-transform: uppercase;
+    font-size: 0.7rem !important;
+    font-family: $acumin !important;
+    color: $formtextcolor !important;
+    appearance: none !important;
+    border: 1px solid $formbordercolor !important;
+    border-radius: 0  !important;
+    box-shadow: none !important;
+    box-sizing: border-box !important;
+    padding: 10px !important;
+    transition: color .2s ease-in-out !important;
+    letter-spacing: 0 !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
 
     &:focus {
         transition: color .2s ease-in-out;
