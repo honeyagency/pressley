@@ -1,4 +1,9 @@
 {% extends "base.twig" %}
+{% block head %}
+		{% if cookie != true %}
+		{% include 'components/sections/section--age-gate.twig' %}
+	{% endif %}
+	{% endblock %}
 {% block content %}
 	<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
 		

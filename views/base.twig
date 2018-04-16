@@ -5,9 +5,7 @@
 </head>
 {% endblock %}
 <body class="{{body_class}}" data-template="base.twig">
-	{% if cookie != true %}
-		{% include 'components/sections/section--age-gate.twig' %}
-	{% endif %}
+
 {% block header %}
 	{% include 'components/header.twig' %}
 	

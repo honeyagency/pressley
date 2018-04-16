@@ -20,4 +20,7 @@ jQuery(document).ready(function($) {
         $('.mobtoggle').html(cart);
         
     } else {}
+    if ($('#av-overlay').length) {
+        $('input#av_verify').val('Continue Shopping');
+    }
 });

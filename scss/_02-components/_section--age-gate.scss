@@ -1,80 +1,108 @@
-.section--age-gate {
-    z-index: 150;
-    position: relative;
-    transform: translateY(-101%);
+// .section--age-gate {
+//     z-index: 150;
+//     position: relative;
+//     transform: translateY(-101%);
+// }
+// @keyframes ageNotice {
+//     0% {
+//         transform: translatey(-150%);
+//     }
+
+//     10% {
+//         transform: translatey(0);
+//     }
+
+//     90% {
+//         transform: translatey(0);
+//     }
+
+//     100% {
+//         transform: translatey(-150%);
+//     }
+// }
+
+// @keyframes ageNoticeStick {
+//     0% {
+//         transform: translatey(0);
+//     }
+
+//     10% {
+//         transform: translatey(0);
+//     }
+
+//     90% {
+//         transform: translatey(0);
+//     }
+
+//     100% {
+//         transform: translatey(0);
+//     }
+// }
+
+// .section--age-gate {
+//     position: fixed;
+//     top: 0;
+//     width: 100%;
+//     left: 0;
+//     z-index: 99999;
+//     right: 0;
+//     display: block;
+//     animation-duration: 5s;
+//     animation-fill-mode: forwards;
+//     animation-timing-function: $base-animation;
+//     transition: transform 0.3s $base-animation;
+//     transform: translatey(-150%);
+// }
+
+// .wf-active {
+//     .section--age-gate {
+//         animation-name: ageNotice;
+
+//         &:hover {
+//             -webkit-animation-play-state: paused;
+//             -moz-animation-play-state: paused;
+//             -o-animation-play-state: paused;
+//             animation-play-state: paused;
+
+//             // animation-name: ageNoticeStick;
+//             // transform:translateY(0);
+//             // transition: transform .3s $base-animation;
+
+//         }
+//     }
+// }
+
+// body.admin-bar {
+//     .section--age-gate {
+//         top: 32px;
+//     }
+// }
+#av-overlay {
+    h1 {
+        @extend .h2;
+
+        font-size: 3.6rem;
+        line-height: 1;
+    }
 }
-@keyframes ageNotice {
-    0% {
-        transform: translatey(-150%);
-    }
 
-    10% {
-        transform: translatey(0);
-    }
-
-    90% {
-        transform: translatey(0);
-    }
-
-    100% {
-        transform: translatey(-150%);
-    }
+#av-overlay-wrap {
+    background-color: transparentize(map-get($gold, main), 0.5) !important;
 }
 
-@keyframes ageNoticeStick {
-    0% {
-        transform: translatey(0);
-    }
-
-    10% {
-        transform: translatey(0);
-    }
-
-    90% {
-        transform: translatey(0);
-    }
-
-    100% {
-        transform: translatey(0);
-    }
-}
-
-
-.section--age-gate {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    left: 0;
-    z-index: 99999;
-    right: 0;
-    display: block;
-    animation-duration: 5s;
-    animation-fill-mode: forwards;
-    animation-timing-function: $base-animation;
-    transition: transform 0.3s $base-animation;
-    transform: translatey(-150%);
-}
-
-.wf-active {
-    .section--age-gate {
-        animation-name: ageNotice;
-
-        &:hover {
-            -webkit-animation-play-state: paused;
-            -moz-animation-play-state: paused;
-            -o-animation-play-state: paused;
-            animation-play-state: paused;
-
-            // animation-name: ageNoticeStick;
-            // transform:translateY(0);
-            // transition: transform .3s $base-animation;
-       
+#av_verify_form {
+    p {
+        &:first-of-type {
+            label {
+                text-transform: uppercase;
+                font-size: 0.7em;
+            }
         }
-    }
-}
 
-body.admin-bar {
-    .section--age-gate {
-        top: 32px;
+        &:last-of-type {
+            label {
+                @extend .screenreader;
+            }
+        }
     }
 }
