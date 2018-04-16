@@ -1,21 +1,37 @@
 .moose {
     position: relative;
-line-height: 1.5;
-@extend .font--sans;
-    &:after {
-        position: absolute;
-        content: ' ';
-        background-color: $black;
-        opacity: .4;
-        top: 0;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        z-index: 1;
+    line-height: 1.5;
+
+    @extend .font--sans;
+
+    @include media($screen-sm) {
+        &:after {
+            position: absolute;
+            content: ' ';
+            background-color: $black;
+            opacity: .4;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            z-index: 1;
+        }
+
+        * {
+            z-index: 100;
+            position: relative;
+        }
     }
 
-    * {
-        z-index: 100;
-        position: relative;
+
+    @include media($max-sm) {
+        background-image: none !important;
+        background-color: $lightgray !important;
+h2{
+    font-size: 2.5em;
+}
+        * {
+            color: $black;
+        }
     }
 }

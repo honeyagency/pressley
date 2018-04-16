@@ -25,9 +25,12 @@
 					</div>
 				</div>
 			{% endfor %}
-			<div style="background-image:url('{{story.moose.image}}');" class="moose grid--one margin--top-4 bgimg spacing--gutter spacing--vert-4">
+			<div style="background-image:url('{{story.moose.image}}');" class="moose grid--one margin--top-4 bgimg  spacing--dsk-vert-4">
+				<img src="{{story.moose.image|resize(64,40)}}" data-original="{{story.moose.image|resize(1280,800)}}" class="hidden--dsk" width="100%">
+				<div class="spacing--gutter spacing--vert-1 spacing--dsk-vert-0">
 				<h2 class="font--fancy-af h1 color--white">{{story.moose.title}}</h2>
 					<div class="grid--one grid--md-half color--white  font--small">{{story.moose.description}}</div>
+				</div>
 				</div>
 		</section>
 	</article>
