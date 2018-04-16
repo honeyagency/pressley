@@ -5,27 +5,7 @@ header.header {
 
     @include media($screen-xsm) {
         padding: 0 (1.7em * $grid);
-        margin-top: 1.7em * $grid;
-    }
-
-
-    @include media($screen-sm) {}
-
-
-    @include media($screen-smd) {}
-
-
-    @include media($screen-md) {}
-
-
-    @include media($screen-lg) {}
-
-
-    @include media($screen-xl) {}
-
-
-    @include media($screen-lg) {
-        margin-top: 3em * $grid;
+        margin-top: 1.5em;
     }
 
 

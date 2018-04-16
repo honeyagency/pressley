@@ -1,25 +1,38 @@
 nav {
-    @include media($max-xs) {
-        transition: transform 0.3s $base-animation;
-        transform: translateY(-100%);
-        position: absolute;
-        width: calc(100% - 3.4em) !important;
-        display: block;
-        top: 0;
-        left: 0;
-        right: 0;
-        background: map-get($gold, main);
-        height: calc(100vh - 3.5em);
-        padding-top: 3.5em;
-        padding-left: 1.7em;
-        padding-right: 1.7em;
+    &.main {
+        @include media($max-xs) {
+            transition: transform 0.3s $base-animation;
+            transform: translateY(-100%);
+            position: absolute;
+            width: calc(100% - 3.4em) !important;
+            display: block;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: $lightgray;
+            height: calc(100vh - 3.5em);
+            padding-top: 3.5em;
+            padding-left: 1.7em;
+            padding-right: 1.7em;
 
-        ul {
-        	border-top: 1px solid $white;
-        	padding-top: 1em;
-        	margin-top: .5em;
-            opacity: 0;
-            transition: opacity 0.9s $base-animation;
+            ul {
+                border-top: 1px solid $black;
+                padding-top: 1em;
+                margin-top: .5em;
+                opacity: 0;
+                transition: opacity 0.9s $base-animation;
+                display: block;
+
+                li {
+                    a {}
+                }
+
+                display: block;
+
+                > li a {
+                    color: $black;
+                }
+            }
         }
     }
 }
@@ -91,7 +104,7 @@ body {
                 background-color: transparent;
 
                 &:after, &:before {
-                    color: $white;
+                    // color: $white;
                     transition: transform 0.3s $base-animation, color 0.3s $base-animation;
                 }
 
