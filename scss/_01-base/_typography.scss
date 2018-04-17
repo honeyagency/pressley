@@ -17,7 +17,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6 .h6 {
     @extend %headings;
 
     word-wrap: break-word;
-    -webkit-hyphens: auto;
+    -webkit-hyphens: none;
     -moz-hyphens: none;
     -ms-hyphens: none;
     -o-hyphens: none;
