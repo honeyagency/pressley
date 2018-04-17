@@ -84,6 +84,17 @@
         font-size: 3.6rem;
         line-height: 1;
     }
+
+    @include media($max-xs) {}
+
+    @include media($max-sm) {
+        width: 90% !important;
+    }
+
+
+    @include media($max-md) {}
+
+    @include media($max-lg) {}
 }
 
 #av-overlay-wrap {
