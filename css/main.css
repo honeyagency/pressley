@@ -74,6 +74,7 @@ h1, .h1, h2, .h2, #av-overlay h1, h3, .h3, h4, .h4, h5, .h5, h6 .h6 {
 
 h1, .h1 {
   font-family: "mrs-eaves", serif;
+  font-style: italic;
   font-size: 4.125em;
   font-weight: 100;
   letter-spacing: 0.5px;
@@ -575,7 +576,8 @@ p.font--large {
   font-family: "urw-din-condensed", HelveticaNeue-CondensedBold, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif; }
 
 .font--fancy-af {
-  font-family: "mrs-eaves", serif; }
+  font-family: "mrs-eaves", serif;
+  font-style: italic; }
 
 .font--larger {
   font-size: 2.5em; }
