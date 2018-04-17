@@ -10,12 +10,25 @@
         }
     }
 }
-.icon-logo-letters{
-	svg{
-		path{
-			&:nth-of-type(3){
-fill:map-get($gold, main);
-			}
-		}
-	}
+
+.icon-logo-letters {
+    svg {
+        path {
+            &:nth-of-type(3) {
+                fill: map-get($gold, main);
+            }
+        }
+    }
+}
+
+.icon-cart {
+    width: 20px;
+    height: 20px;
+    display: block;
+
+    svg {
+        path {
+            fill: $gray;
+        }
+    }
 }

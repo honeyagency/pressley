@@ -16,5 +16,5 @@
 			{% if loop.last %}{% else %}<span class="text--uppercase font--din nav-divide hidden--mob"></span>{% endif %}
 		{% endfor %}
 	</ul>
-	<div class="hidden--dsk">{% include 'components/sub-navigation.twig' %}</div>
+	<div class="hidden--dsk">{% include 'components/sub-navigation.twig' with {'carthide': true} %}</div>
 </nav>

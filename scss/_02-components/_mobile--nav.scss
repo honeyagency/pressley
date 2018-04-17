@@ -14,9 +14,9 @@ nav {
             padding-top: 3.5em;
             padding-left: 1.7em;
             padding-right: 1.7em;
-
+>ul{border-top: 1px solid $black;}
             ul {
-                border-top: 1px solid $black;
+                
                 padding-top: 1em;
                 margin-top: .5em;
                 opacity: 0;
@@ -135,4 +135,10 @@ body {
             }
         }
     }
+}
+
+.mobtoggle {
+    top: -10px;
+    height: 20px;
+    position: relative;
 }

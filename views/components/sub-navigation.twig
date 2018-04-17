@@ -14,10 +14,13 @@
 				{% endif %}
 			</li>
 			{% if loop.last %}
+				{% if carthide == true %}{% else %}
 				<li class="spacing--horiz-half nav-item hidden--mob">
-					<span id="cart-toggle"></span>
+					<span id="cart-toggle"><i class="icon-cart" data-grunticon-embed></i></span>
 				</li>
+			{% endif %}
 				{% else %}<span class=""></span>{% endif %}
+
 		{% endfor %}
 	</ul>
-	</nav><!-- #nav -->
+</nav><!-- #nav -->
