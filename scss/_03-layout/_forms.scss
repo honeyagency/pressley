@@ -1,13 +1,10 @@
 $formbordercolor: map-get($gold, main);
 $formtextcolor: map-get($gold, main);
 $formplaceholdercolor: map-get($gold, main);
-
 $forminvalidbackground: red;
 $forminvalidcolor: white;
-
 $formsuccessbackground: orange;
 $formsuccesstextcolor: white;
-
 $formbuttonbackground: transparent;
 $formbuttoncolor: white;
 
@@ -31,13 +28,14 @@ label {
 input,
 select,
 textarea,
-#{$all-text-inputs},[type="submit"] {
+#{$all-text-inputs},
+[type="submit"] {
     font-size: 0.7rem !important;
     font-family: $acumin !important;
     color: $formtextcolor !important;
     appearance: none !important;
     border: 1px solid $formbordercolor !important;
-    border-radius: 0  !important;
+    border-radius: 0 !important;
     box-shadow: none !important;
     box-sizing: border-box !important;
     padding: 10px !important;
@@ -124,8 +122,8 @@ select {
 //     appearance: none;
 //     border: none;
 // }
-
-.screenreader, .screen-reader-text {
+.screenreader,
+.screen-reader-text {
     position: absolute;
     left: -10000px;
     top: auto;
@@ -197,10 +195,55 @@ div.wpcf7-mail-sent-ok {
     color: $formsuccesstextcolor;
 }
 
-button, [type="submit"] {
+button,
+[type="submit"] {
     background-color: $formbuttonbackground;
 
     // color: $formbuttoncolor;
     letter-spacing: 3px;
     text-transform: uppercase;
 }
+
+.gform_body {
+    ul,
+    li {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+
+    ul {
+        @extend .flex;
+
+        @extend .flex--wrap;
+
+        @extend .justify--between;
+
+        .ginput_complex {
+            @extend .flex;
+
+            @extend .flex--wrap;
+
+            @extend .justify--between;
+
+            span {
+                @extend .grid--half;
+            }
+        }
+
+        input, textarea {
+            margin-bottom: 1em;
+            width: 100%;
+        }
+    }
+
+}
+
+    [type="submit"] {
+        border-bottom: 1px solid;
+        padding: 10px 2em !important;
+        background: map-get($gold, main);
+        color: $white !important;
+        font-size: .8rem !important;
+        letter-spacing: 1px !important;
+    }
