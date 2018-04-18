@@ -29,9 +29,6 @@
 
 
         @include media($screen-xl) {}
-
-
-  
     }
 
     .bgimg {
@@ -41,33 +38,33 @@
         }
     }
 }
-      .block--person {
-            i {
-                height: 50px;
-                width: auto;
-                display: inline-block;
-                position: relative;
-                transform: translateY(1em);
 
-                svg {
-                    position: absolute;
-                    top: 50%;
-                    display: block;
-                    transform: translateY(-50%);
-                }
+.block--person {
+    i {
+        height: 50px;
+        width: 100%;
+        display: inline-block;
+        position: relative;
+        transform: translateY(1em);
 
-                &.icon-sig-brittany {
-                    svg {
-                        height: 80px;
-                        width: auto;
-                    }
-                }
+        svg {
+            position: absolute;
+            top: 50%;
+            display: block;
+            height: 100%;
+            width: 100%;
+        }
 
-                &.icon-sig-charlie {
-                    svg {
-                        height: 50px;
-                        width: auto;
-                    }
-                }
+        &.icon-sig-brittany {
+            svg {
+                transform: translateY(-20%);
             }
         }
+
+        &.icon-sig-charlie {
+            svg {
+                transform: translateY(-28%);
+            }
+        }
+    }
+}
