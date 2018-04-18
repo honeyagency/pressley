@@ -13,8 +13,8 @@
 					</ul>
 				{% endif %}
 			</li>
-			{% if loop.last %}{% else %}<span class="text--uppercase font--din nav-divide hidden--mob"></span>{% endif %}
+			{% if loop.last %}{% else %}<span class="text--uppercase font--din nav-divide hidden--xs-down"></span>{% endif %}
 		{% endfor %}
 	</ul>
-	<div class="hidden--dsk">{% include 'components/sub-navigation.twig' with {'carthide': true} %}</div>
+	<div class="hidden--tab">{% include 'components/sub-navigation.twig' with {'carthide': true} %}</div>
 </nav>

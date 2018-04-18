@@ -6,7 +6,7 @@ nav {
             @include media($screen-xs) {}
 
 
-            @include media($screen-xsm) {
+            @include media($screen-sm) {
                 margin-bottom: 3em;
             }
 
@@ -105,6 +105,25 @@ nav {
                 @include media($screen-xl) {}
             }
         }
+
+        @include media($screen-xs) {
+            margin-top: -0.5em;
+            margin-bottom: -1.5em;
+        }
+
+
+        @include media($screen-sm) {
+            margin-top: 0;
+        margin-bottom: 3em;
+
+        }
+
+
+        @include media($screen-md) {}
+
+        @include media($screen-lg) {}
+
+        @include media($screen-xl) {}
     }
 
     &.subnav {

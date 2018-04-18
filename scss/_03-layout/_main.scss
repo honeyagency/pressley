@@ -1,29 +1,12 @@
 main {
-    
     position: relative;
 
     @include media($screen-xs) {
-        top: -2em;
+        // top: -2em;
     }
 
 
-    @include media($screen-xsm) {
+    @include media($screen-sm) {
         top: -3em;
-        
     }
-
-
-    @include media($screen-sm) {}
-
-
-    @include media($screen-smd) {}
-
-
-    @include media($screen-md) {}
-
-
-    @include media($screen-lg) {}
-
-
-    @include media($screen-xl) {}
 }

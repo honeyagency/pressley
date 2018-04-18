@@ -47,19 +47,21 @@
     max-width: $max-wrap;
     box-sizing: content-box;
 }
-.huge-wrap{
+
+.huge-wrap {
     max-width: 1440px;
-    
 }
 
 .content-wrap {
     max-width: $content-wrap;
     box-sizing: content-box;
 }
-.med-wrap{
+
+.med-wrap {
     max-width: 1120px;
     box-sizing: content-box;
 }
+
 .margin--center {
     margin: 0 auto;
 }
@@ -102,6 +104,18 @@
 
 .hidden--dsk {
     @include media($screen-sm) {
+        display: none !important;
+    }
+}
+
+.hidden--xs-down {
+    @include media($max-xs) {
+        display: none !important;
+    }
+}
+
+.hidden--tab {
+    @include media($screen-xs) {
         display: none !important;
     }
 }

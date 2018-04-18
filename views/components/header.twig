@@ -1,9 +1,9 @@
 <header class="header flex flex--wrap justify--between max-wrap margin--center align--items-center">
-	<div class="navwrap grid--one grid--xs-three-fifths grid--sm-two-fifths grid--md-third">
-		<div class="hidden--mob">{% include 'components/sub-navigation.twig' %}</div>
+	<div class="navwrap grid--one grid--xs-three-fifths grid--smd-two-fifths grid--md-third">
+		<div class="hidden--xs-down">{% include 'components/sub-navigation.twig' %}</div>
 		{% include 'components/navigation.twig' %}
 	</div>
 	<label class="menu--trigger"><span></span></label>
 	<h1 class="grid--half grid--xs-two-fifths grid--md-third"><a class="hdr-logo-link" href="/" rel="home"><i class="logdesk icon-logo hidden--mob" data-grunticon-embed>{{site.name}}</i><i class="logdesk icon-logo-noseal hidden--dsk" data-grunticon-embed>{{site.name}}</i></a></h1>
-<span class="hidden--dsk mobtoggle"></span>
+<span class="hidden--tab mobtoggle"></span>
 </header>
