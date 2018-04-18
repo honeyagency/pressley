@@ -91,7 +91,7 @@
     @include media($max-sm) {
         width: 90% !important;
         display: block;
-        margin: 0 auto;
+        margin: 0;
         left: 50%;
         transform: translateX(-50%);
         top: 2em;

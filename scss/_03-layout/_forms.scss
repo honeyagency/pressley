@@ -41,13 +41,13 @@ textarea,
     box-shadow: none !important;
     box-sizing: border-box !important;
     padding: 10px !important;
-    transition: color .2s ease-in-out !important;
+    transition: color 0.2s $base-animation !important;
     letter-spacing: 0 !important;
     font-weight: 600 !important;
     text-transform: uppercase !important;
 
     &:focus {
-        transition: color .2s ease-in-out;
+        transition: color 0.2s $base-animation;
 
         // border-color: map-get($green, main);
         box-shadow: 0;
@@ -55,26 +55,26 @@ textarea,
     }
 
     &::-webkit-input-placeholder {
-        transition: color .2s ease-in-out;
+        transition: color 0.2s $base-animation;
         color: $formplaceholdercolor;
     }
 
     &:-moz-placeholder {
-        transition: color .2s ease-in-out;
+        transition: color 0.2s $base-animation;
 
         /* Firefox 18- */
         color: $formplaceholdercolor;
     }
 
     &::-moz-placeholder {
-        transition: color .2s ease-in-out;
+        transition: color 0.2s $base-animation;
 
         /* Firefox 19+ */
         color: $formplaceholdercolor;
     }
 
     &:-ms-input-placeholder {
-        transition: color .2s ease-in-out;
+        transition: color 0.2s $base-animation;
         color: $formplaceholdercolor;
     }
 
@@ -91,6 +91,24 @@ textarea {
 [type="checkbox"],
 [type="radio"] {
     display: inline;
+}
+
+[type="checkbox"] {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    padding: 0 !important;
+    margin: 0 5px 0 0 !important;
+    vertical-align: sub;
+    border: 1px solid map-get($gold, main) !important;
+    background-color: transparent;
+    transition: background-color 0.2s $base-animation, border 0.2s $base-animation !important;
+
+    &:checked {
+        border: 2px solid map-get($gold, dark) !important;
+        background-color: transparentize(map-get($gold, main), 0.7);
+    }
 }
 
 [type="file"] {
