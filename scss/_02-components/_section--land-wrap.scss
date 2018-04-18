@@ -2,4 +2,27 @@
     background-size: 360px;
     background-repeat: no-repeat;
     background-position: 100% 30%;
+    position: relative;
+
+    @include media($max-sm) {
+        &:before {
+            content: ' ';
+            display: block;
+            height: 100%;
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: white;
+            opacity: .6;
+        }
+
+        .section--vine-land {
+            z-index: 99;
+            position: relative;
+        }
+    }
 }
