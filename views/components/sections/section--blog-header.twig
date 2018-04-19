@@ -2,6 +2,6 @@
 	<a href="{{post.guid}}" class="color--white"><h1 class="color--white hidden--mob">{{post.post_title}}</h1>
 	{% if post.thumbnail %}<img width="100%" src="{{post.thumbnail.src|resize(320,120)}}" data-original="{{post.thumbnail.src|resize(1280, 480)}}" alt="{{post.thumbnail.src.caption}}" data-original-set="{{post.thumbnail.src|resize(640, 240)}}  640w,{{post.thumbnail.src|resize(750, 281)}}  750w,{{post.thumbnail.src|resize(1080,405)}} 1080w,{{post.thumbnail.src|resize(1280, 480)}} 1280w,{{post.thumbnail.src|resize(1366,512)}} 1366w,{{post.thumbnail.src|resize(1440,540)}} 1440w,{{post.thumbnail.src|resize(1707,640)}} 1920w, {{post.thumbnail.src|resize(2560,960)}} 2880w" sizes="100vw">
 	{% endif %}
-	<h1 class="hidden--dsk">{{post.post_title}}</h1>
+	<div class="spacing--gutter hidden--dsk spacing--vert-1"><h1 class=" color--black mar--no">{{post.post_title}}</h1></div>
 	</a>
 </section>

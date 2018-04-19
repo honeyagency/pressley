@@ -35,7 +35,7 @@ $h6: 0.7 * $base-font-size;
 h1, .h1 {
     font-family: $fancy-af;
 
-    font-size: $h1;
+    font-size: 3em;
     font-weight: 100;
     letter-spacing: 0.5px;
     line-height: 0.9;
@@ -48,7 +48,7 @@ h2, .h2 {
 }
 
 h3, .h3 {
-    font-size: 0.85em;
+    font-size: 1.55em;
     letter-spacing: 1px;
 
     &.font--din {
