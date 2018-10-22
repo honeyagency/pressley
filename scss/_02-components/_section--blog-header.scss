@@ -30,7 +30,19 @@
 
 .imageright {
     float: right;
-    margin-right: -7em;
+    margin-right: -1em;
     padding-left: 1em;
     padding-bottom: 1em;
+    width: 140px;
+    height: auto;
+
+    @include media($screen-sm) {
+        width: 190px;
+    }
+}
+
+.noimg + .article-content {
+    @include media($max-sm) {
+        margin-top: 2em;
+    }
 }
