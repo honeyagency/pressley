@@ -18,4 +18,10 @@
     img {
         position: relative;
     }
+    &.noimg{
+        background: map-get($gold, main);
+        @include media($screen-sm){
+            min-height: 480px;
+        }
+    }
 }
