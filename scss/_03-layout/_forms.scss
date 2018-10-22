@@ -212,7 +212,7 @@ button,
         list-style-type: none;
     }
 
-    ul {
+    > ul {
         @extend .flex;
 
         @extend .flex--wrap;
@@ -231,19 +231,22 @@ button,
             }
         }
 
+        > li {
+            @extend .grid--one;
+        }
+
         input, textarea {
             margin-bottom: 1em;
             width: 100%;
         }
     }
-
 }
 
-    [type="submit"] {
-        border-bottom: 1px solid;
-        padding: 10px 2em !important;
-        background: map-get($gold, main);
-        color: $white !important;
-        font-size: .8rem !important;
-        letter-spacing: 1px !important;
-    }
+[type="submit"] {
+    border-bottom: 1px solid;
+    padding: 10px 2em !important;
+    background: map-get($gold, main);
+    color: $white !important;
+    font-size: .8rem !important;
+    letter-spacing: 1px !important;
+}
