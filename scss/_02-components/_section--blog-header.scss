@@ -18,10 +18,19 @@
     img {
         position: relative;
     }
-    &.noimg{
+
+    &.noimg {
         background: map-get($gold, main);
-        @include media($screen-sm){
+
+        @include media($screen-sm) {
             min-height: 480px;
         }
     }
+}
+
+.imageright {
+    float: right;
+    margin-right: -7em;
+    padding-left: 1em;
+    padding-bottom: 1em;
 }
