@@ -39,6 +39,8 @@ if (is_front_page() == true) {
     $context['story'] = prepareStoryFields();
 } elseif (is_page(10)) {
     $context['wines'] = getCustomPosts('wine', -1, null, 'date', null, null);
+}elseif (is_page( 15 )) {
+	add_action('wp_enqueue_scripts', 'variant');
 }
 $context['post'] = $post;
 Timber::render(array('page-' . $post->post_name . '.twig', 'page.twig'), $context);

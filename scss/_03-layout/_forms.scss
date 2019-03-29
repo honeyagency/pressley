@@ -249,4 +249,36 @@ button,
     color: $white !important;
     font-size: .8rem !important;
     letter-spacing: 1px !important;
+
+    @include media($max-xs) {}
+
+
+    @include media($max-xsm) {}
+
+
+    @include media($max-sm) {
+        width: 100%;
+        flex-basis: 100%;
+    }
+}
+
+select {
+    @include media($max-sm) {
+        margin-bottom: 1rem !important;
+    }
+}
+
+.block--checkout-submit {
+    button {
+        @include media($max-xs) {}
+
+        @include media($max-xsm) {}
+
+        @include media($max-sm) {
+            width: 100%;
+            padding-top: 1rem !important;
+            padding-bottom: 1rem !important;
+            font-size: .9rem !important;
+        }
+    }
 }

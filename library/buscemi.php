@@ -71,6 +71,13 @@ function buscemi_scripts()
 }
 add_action('wp_enqueue_scripts', 'buscemi_scripts');
 
+function variant()
+{
+  
+    wp_enqueue_script('variant', get_template_directory_uri() . '/app/vendors/variant.js', array('jquery'), null, null, true);
+}
+
+
 // Allowing SVG preveiw in WP Upload
 function cc_mime_types($mimes)
 {
