@@ -5,12 +5,7 @@
 		
 		<section class="flex flex--wrap margin--center justify--center align--items-center spacing--gutter med-wrap spacing--vert-2 spacing--dsk-vert-5">
 			<div class="grid--half grid--sm-third">
-				<picture class="block lazy grid--one">
-					<source type="image/webp" data-src="{{wine.images.bottle|resize(720)|towebp}}">
-					<source type="image/jpeg" data-src="{{wine.images.bottle|resize(720)}}">
-					<img src="{{wine.images.bottle|resize(100)}}" alt="{{wine.title}}" width="330" class="lazy block  margin--center" >
-				</picture>
-				
+				<img src="{{wine.images.bottle|resize(100)}}" data-original="{{wine.images.bottle|resize(720)}}" alt="{{wine.title}}" width="330" class="block margin--center" >
 			</div>
 			<div class="section--wine-details grid--one grid--sm-two-fifths spacing--vert-2 spacing--dsk-horiz-2">
 				<h1 class="color--gold font--din">{{wine.details.vintage}} {{post.title|upper}}</h1>
