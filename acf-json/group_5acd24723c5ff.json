@@ -230,6 +230,37 @@
                     "prepend": "",
                     "append": "",
                     "maxlength": ""
+                },
+                {
+                    "key": "field_5c9e6fe8bdc98",
+                    "label": "Image",
+                    "name": "image",
+                    "type": "image",
+                    "instructions": "Transparent <code>.PNG<\/code>",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5ace657428d71",
+                                "operator": "==empty"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "id",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
                 }
             ]
         }
@@ -251,5 +282,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1523654416
+    "modified": 1553887560
 }

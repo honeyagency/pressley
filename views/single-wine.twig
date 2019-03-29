@@ -21,7 +21,7 @@
 			<h6 class="grid--one text--center font--sans text--uppercase color--gray">Pairs Well With</h6>
 			{% for icon in wine.icons %}
 				<div class="pair--icon flex flex--wrap justify--between align--items-center spacing--vert-1">
-					<i class="icon-{{icon.class}}" data-grunticon-embed></i>
+					{% if icon.class != null %}<i class="icon-{{icon.class}}" data-grunticon-embed></i>{% else %}<img src="{{icon.image|resize(70,70)}}" alt="">{% endif %}
 					<span class="font--din text--uppercase font--medium spacing--horiz-half">{{icon.text|upper}}</span>
 				</div>
 			{% endfor %}

@@ -210,9 +210,17 @@ function prepareWine()
         $icons = array();
         while (have_rows('field_5ace656628d70')) {
             the_row();
+
+            $wineIcon   = null;
+            $wineIconId = get_sub_field('field_5c9e6fe8bdc98');
+
+            if (!empty($wineIconId)) {
+                $wineIcon = new TimberImage($wineIconId);
+            }
             $icons[] = array(
                 'class' => get_sub_field('field_5ace657428d71'),
                 'text'  => get_sub_field('field_5ace657e28d72'),
+                'image' => $wineIcon,
             );
         }
     }
