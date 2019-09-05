@@ -245,7 +245,7 @@ button,
 [type="submit"] {
     border-bottom: 1px solid;
     padding: 10px 2em !important;
-    background: map-get($gold, main);
+    background-color: map-get($gold, main);
     color: $white !important;
     font-size: .8rem !important;
     letter-spacing: 1px !important;
@@ -272,7 +272,9 @@ select {
     button {
         @include media($max-xs) {}
 
+
         @include media($max-xsm) {}
+
 
         @include media($max-sm) {
             width: 100%;

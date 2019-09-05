@@ -15,5 +15,9 @@
             display: block;
             height: 12px;
         }
+
+        @include media($max-sm) {
+            justify-content: left;
+        }
     }
 }
