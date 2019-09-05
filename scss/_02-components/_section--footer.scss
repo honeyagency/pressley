@@ -1,4 +1,10 @@
 .section--footer {
+    .font--small {
+        @include media($max-sm) {
+            font-size: 1.1rem;
+        }
+    }
+
     section {
         @include media($screen-sm) {
             border-left: 1px solid $bordergray;
