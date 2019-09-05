@@ -1,18 +1,20 @@
 .section--footer {
     section {
-        @include media($screen-xs){}
-        @include media($screen-sm){
+        @include media($screen-sm) {
             border-left: 1px solid $bordergray;
-        padding-left: 0.5em;
-            
+            padding-left: 0.5em;
         }
-        @include media($screen-md){}
-        @include media($screen-lg){}
-        @include media($screen-xl){}
+
+
         box-sizing: border-box;
     }
 
     .block--footer-logo {
+        @include media($max-md) {
+            display: none;
+        }
+
+
         border: 0;
         padding-left: 0;
 
@@ -23,7 +25,7 @@
         }
     }
 
-    @include media($screen-lg) {
+    @include media($screen-md) {
         .block--footer-nav-1 {
             order: 2;
         }

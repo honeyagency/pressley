@@ -1,26 +1,8 @@
 .block--detail {
     h3 {
-        @include media($max-xs) {}
-
-
-        @include media($max-xsm) {}
-
-
-        @include media($max-sm) {}
-
-
-        @include media($max-smd) {}
-
-
         @include media($max-md) {
             text-align: left;
         }
-
-
-        @include media($max-lg) {}
-
-
-        @include media($max-xl) {}
     }
 
     p {
