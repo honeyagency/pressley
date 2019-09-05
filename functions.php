@@ -53,11 +53,23 @@ class StarterSite extends TimberSite
 
         /* this is where you can add your own fuctions to twig */
         $twig->addExtension(new Twig_Extension_StringLoader());
-        $twig->addFilter('myfoo', new Twig_Filter_Function('myfoo'));
+        $twig->addFilter('widowless', new Twig_Filter_Function('word_wrapper'));
         return $twig;
     }
 }
 
+function word_wrapper($text)
+{
+    $minWords = 3;
+    $return   = $text;
+    $arr      = explode(' ', $text);
+    if (count($arr) >= $minWords) {
+        $arr[count($arr) - 2] .= '&nbsp;' . $arr[count($arr) - 1];
+        array_pop($arr);
+        $return = implode(' ', $arr);
+    }
+    return $return;
+}
 new StarterSite();
 
 require_once 'library/admin.php';
