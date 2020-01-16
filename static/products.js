@@ -1,4 +1,5 @@
-var client = ShopifyBuy.buildClient({
+jQuery(document).ready(function($) {
+    var client = ShopifyBuy.buildClient({
     storefrontAccessToken: 'b7cfc2a8e8f47e1220c7b89c22be09aa',
     domain: 'pressley-vineyards.myshopify.com',
     appId: '29388537919'
@@ -49,4 +50,5 @@ ui.createComponent('cart', {
             },
         },
     }
+});
 });
