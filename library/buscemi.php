@@ -36,7 +36,7 @@ function jquery_enqueue()
 {
     wp_dequeue_script('jquery');
     wp_deregister_script('jquery');
-    wp_register_script('buy_button', "https://sdks.shopifycdn.com/buy-button/latest/buybutton.js", null, null, null);
+    wp_register_script('buy_button', "https://sdks.shopifycdn.com/buy-button/latest/buybutton.js", null, null, true);
 
     wp_register_script('jquery', "https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js", array('buy_button'), null, true);
 }
