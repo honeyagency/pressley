@@ -85,7 +85,6 @@
 .shopify-buy-frame--toggle {
     @include media($max-xs) {}
 
-
     @include media($max-sm) {
         display: block !important;
         position: relative;
@@ -95,7 +94,6 @@
 
 
     @include media($max-md) {}
-
 
     @include media($max-lg) {}
 }
