@@ -36,11 +36,10 @@ function jquery_enqueue()
 {
     wp_dequeue_script('jquery');
     wp_deregister_script('jquery');
-    wp_register_script('buy_button', "https://sdks.shopifycdn.com/buy-button/latest/buybutton.js",null,null,null);
+    wp_register_script('buy_button', "https://sdks.shopifycdn.com/buy-button/latest/buybutton.js", null, null, null);
 
-    wp_register_script('jquery', "https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js", array('buy_button'),null,true);
+    wp_register_script('jquery', "https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js", array('buy_button'), null, true);
 }
-
 
 function localInstall()
 {
@@ -56,7 +55,7 @@ function buscemi_scripts()
 {
     wp_enqueue_script('buy_button');
     wp_enqueue_script('jquery');
-   localInstall();
+    localInstall();
     wp_register_script('lazyload', get_template_directory_uri() . '/app/vendors/lazyload.min.js', null, false, true);
     wp_enqueue_script('lazyload');
     wp_register_script('appear', get_template_directory_uri() . '/app/vendors/appear.min.js', null, false, true);
@@ -71,10 +70,9 @@ add_action('wp_enqueue_scripts', 'buscemi_scripts');
 
 function variant()
 {
-  
+
     wp_enqueue_script('variant', get_template_directory_uri() . '/app/vendors/variant.js', array('jquery'), null, null, true);
 }
-
 
 // Allowing SVG preveiw in WP Upload
 function cc_mime_types($mimes)
@@ -95,17 +93,15 @@ if (function_exists('acf_add_options_page')) {
 require_once 'functions--custom-fields.php';
 require_once 'functions--custom-posts.php';
 
-
-
-
 add_action('init', 'ageGate');
 
 // ageGate() set the cookie on the domain and directory WP is installed on
-function ageGate(){
-  $path = parse_url(get_option('siteurl'), PHP_URL_PATH);
-  $host = parse_url(get_option('siteurl'), PHP_URL_HOST);
-  $expiry = strtotime('+1 month');
-  setcookie('sawthegate', true, $expiry, $path, $host);
+function ageGate()
+{
+    $path   = parse_url(get_option('siteurl'), PHP_URL_PATH);
+    $host   = parse_url(get_option('siteurl'), PHP_URL_HOST);
+    $expiry = strtotime('+1 month');
+    setcookie('sawthegate', true, $expiry, $path, $host);
 
 }
 
@@ -117,35 +113,36 @@ function custom_menu_order($menu_ord)
     }
 
     return array(
-        'index.php', // Dashboard
-        'separator1', // First separator
-        'edit.php?post_type=page', // Pages    
-        'edit.php?post_type=wine', // Pages    
-        'edit.php', // Posts
+        'index.php',               // Dashboard
+        'separator1',              // First separator
+        'edit.php?post_type=page', // Pages
+        'edit.php?post_type=wine', // Pages
+        'edit.php',                // Posts
         'admin.php?page=gf_edit_forms',
-        'separator2', // Second separator
-        'upload.php', // Media
-        'link-manager.php', // Links
-        'themes.php', // Appearance
-        'plugins.php', // Plugins
-        'users.php', // Users
+        'separator2',          // Second separator
+        'upload.php',          // Media
+        'link-manager.php',    // Links
+        'themes.php',          // Appearance
+        'plugins.php',         // Plugins
+        'users.php',           // Users
         'options-general.php', // Settings
-        'separator-last', // Last separator
+        'separator-last',      // Last separator
     );
 
 }
 add_filter('custom_menu_order', 'custom_menu_order'); // Activate custom_menu_order
 add_filter('menu_order', 'custom_menu_order');
 
-function remove_admin_bar_links() {
+function remove_admin_bar_links()
+{
     global $wp_admin_bar, $current_user;
-    
-    // if ($current_user->ID != 1) {
-        $wp_admin_bar->remove_menu('wp-admin-bar-wpseo-menu');          // Remove the updates link
-        $wp_admin_bar->remove_menu('comments');         // Remove the comments link
-        // $wp_admin_bar->remove_menu('new-content');      // Remove the content link
-        // $wp_admin_bar->remove_menu('w3tc');             // If you use w3 total cache remove the performance link
-        // $wp_admin_bar->remove_menu('my-account');       // Remove the user details tab
-    // }
+
+                                                           // if ($current_user->ID != 1) {
+    $wp_admin_bar->remove_menu('wp-admin-bar-wpseo-menu'); // Remove the updates link
+    $wp_admin_bar->remove_menu('comments');                // Remove the comments link
+                                                           // $wp_admin_bar->remove_menu('new-content');      // Remove the content link
+                                                           // $wp_admin_bar->remove_menu('w3tc');             // If you use w3 total cache remove the performance link
+                                                           // $wp_admin_bar->remove_menu('my-account');       // Remove the user details tab
+                                                           // }
 }
-add_action( 'wp_before_admin_bar_render', 'remove_admin_bar_links' );
+add_action('wp_before_admin_bar_render', 'remove_admin_bar_links');

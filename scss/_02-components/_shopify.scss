@@ -7,6 +7,8 @@
     top: 4px;
     position: relative;
     display: inline-block;
+    width: 10px;
+    height: 10px;
 }
 
 .shopify-buy__cart-toggle__count {
@@ -83,11 +85,19 @@
 }
 
 .shopify-buy-frame--toggle {
-@include media($max-xs){}
-@include media($max-sm){display: block !important;
-    position: relative;
-    height: 20px;
-    transform: translateY(-100%);}
-@include media($max-md){}
-@include media($max-lg){}
+    @include media($max-xs) {}
+
+
+    @include media($max-sm) {
+        display: block !important;
+        position: relative;
+        height: 20px;
+        transform: translateY(-100%);
+    }
+
+
+    @include media($max-md) {}
+
+
+    @include media($max-lg) {}
 }
