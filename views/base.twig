@@ -4,16 +4,14 @@
 	{% endblock %}
 </head>
 {% endblock %}
-<body class="{{body_class}}" data-template="base.twig">
+<body class="wp {{body_class}}" data-template="base.twig">
 
 {% block header %}
 	{% include 'components/header.twig' %}
 	
 {% endblock %}
 <main role="main" class="content-wrapper margin--center huge-wrap">
-	{% if post.post_type == 'post' %}
-		{% include 'components/sections/section--blog-header.twig' %}
-	{% else %}
+	{% if post.post_type != 'post' %}
 		{% include 'components/sections/section--header.twig' %}
 	{% endif %}
 	{% block content %}

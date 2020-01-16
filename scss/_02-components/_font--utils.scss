@@ -38,7 +38,7 @@ p.font--large {
 }
 
 .font--small {
-    font-size: .85em;
+    font-size: 0.95rem;
 }
 
 .font--tiny {
@@ -108,11 +108,12 @@ p.font--large {
 .letter--3 {
     letter-spacing: 3px;
 }
-hr{
-    &.inline{
 
-width: 160px;
+hr {
+    &.inline {
+        width: 160px;
     }
+
     border: 0;
     border-bottom: 1px solid;
 }

@@ -23,4 +23,7 @@ jQuery(document).ready(function($) {
     if ($('#av-overlay').length) {
         $('input#av_verify').val('Continue Shopping');
     }
+    if ($('.shopify-buy-frame').length >0) {
+        $('.shopify-buy-frame').parent('body').addClass('shopify');
+    }
 });

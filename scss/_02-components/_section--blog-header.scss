@@ -12,6 +12,30 @@
             min-height: 480px;
         }
     }
+
+    h1 {
+        letter-spacing: -1.5px;
+
+        + strong {
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9em;
+            margin-top: 0.5rem;
+            display: block;
+        }
+    }
+}
+
+.tease {
+    h2 {
+        + strong {
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9em;
+            margin-top: 0.5rem;
+            display: block;
+        }
+    }
 }
 
 .imageright {

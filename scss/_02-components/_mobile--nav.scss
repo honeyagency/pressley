@@ -2,7 +2,7 @@ nav {
     &.main {
         @include media($max-xs) {
             transition: transform 0.3s $base-animation;
-            transform: translateY(-100%);
+            transform: translateY(-110%);
             position: absolute;
             width: calc(100% - 3.4em) !important;
             display: block;
@@ -14,9 +14,12 @@ nav {
             padding-top: 3.5em;
             padding-left: 1.7em;
             padding-right: 1.7em;
->ul{border-top: 1px solid $black;}
+
+            > ul {
+                border-top: 1px solid $black;
+            }
+
             ul {
-                
                 padding-top: 1em;
                 margin-top: .5em;
                 opacity: 0;

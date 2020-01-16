@@ -36,7 +36,9 @@ function jquery_enqueue()
 {
     wp_dequeue_script('jquery');
     wp_deregister_script('jquery');
-    wp_register_script('jquery', "https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js", false, null);
+    wp_register_script('buy_button', "https://sdks.shopifycdn.com/buy-button/latest/buybutton.js",null,null,null);
+
+    wp_register_script('jquery', "https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js", array('buy_button'),null,true);
 }
 
 function localInstall()
@@ -53,6 +55,7 @@ function localInstall()
 // Enqueuing all of our scripts and styles
 function buscemi_scripts()
 {
+    wp_enqueue_script('buy_button');
     wp_enqueue_script('jquery');
     if (localInstall() == true) {
         $reloadScript = 'http://localhost:35729/livereload.js';
