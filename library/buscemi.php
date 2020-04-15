@@ -36,9 +36,7 @@ function jquery_enqueue()
 {
     wp_dequeue_script('jquery');
     wp_deregister_script('jquery');
-    wp_register_script('buy_button', "https://sdks.shopifycdn.com/buy-button/latest/buybutton.js", null, null, true);
-
-    wp_register_script('jquery', "https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js", array('buy_button'), null, true);
+    wp_register_script('jquery', get_template_directory_uri() . '/app/jquery-3.4.1.min.js', false, null);
 }
 
 function localInstall()
@@ -53,9 +51,10 @@ function localInstall()
 // Enqueuing all of our scripts and styles
 function buscemi_scripts()
 {
-    wp_enqueue_script('buy_button');
     wp_enqueue_script('jquery');
     localInstall();
+    wp_register_script('buy_button', "http://sdks.shopifycdn.com/buy-button/latest/buybutton.js",array('jquery'), null, null, true);
+    wp_enqueue_script('buy_button');
     wp_register_script('lazyload', get_template_directory_uri() . '/app/vendors/lazyload.min.js', null, false, true);
     wp_enqueue_script('lazyload');
     wp_register_script('appear', get_template_directory_uri() . '/app/vendors/appear.min.js', null, false, true);

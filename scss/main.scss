@@ -1,58 +1,50 @@
-@import
-  '_07-vendors/bourbon/bourbon',
-  '_07-vendors/neat/neat';
+@import "_07-vendors/bourbon/bourbon";
+@import "_07-vendors/neat/neat";
 
-@import
-  '_06-utils/color-palette',
-  '_06-utils/variables',
-  '_06-utils/mixins';
-  
+@import "_06-utils/color-palette";
+@import "_06-utils/variables";
+@import "_06-utils/mixins";
 
-@import
-  '_01-base/reset',
-  '_01-base/typography',
-  '_01-base/base';
+@import "_01-base/reset";
+@import "_01-base/fonts";
+@import "_01-base/typography";
+@import "_01-base/base";
 
 // @import '_03-layout/to-delete';
 
-@import
+@import "_03-layout/navigation";
+@import "_03-layout/header";
+@import "_03-layout/main";
+@import "_03-layout/footer";
+@import "_03-layout/forms";
 
-  '_03-layout/navigation',
-  '_03-layout/header',
-  '_03-layout/main',
-  '_03-layout/footer',
-  '_03-layout/forms';
+@import "_02-components/animation";
+@import "_02-components/bg--color";
+@import "_02-components/block--detail";
+@import "_02-components/block--footer-email";
+@import "_02-components/block--footer-social";
+@import "_02-components/buttons";
+@import "_02-components/color";
+@import "_02-components/display";
+@import "_02-components/font--utils";
+@import "_02-components/flex";
+@import "_02-components/grid";
+@import "_02-components/grid--double";
+@import "_02-components/icons";
+@import "_02-components/margin";
+@import "_02-components/mobile--nav";
+@import "_02-components/moose";
+@import "_02-components/shopify";
+@import "_02-components/spacing";
+@import "_02-components/section--age-gate";
+@import "_02-components/section--blog-header";
+@import "_02-components/section--footer";
+@import "_02-components/section--footer-bottom";
+@import "_02-components/section--header";
+@import "_02-components/section--home-hero";
+@import "_02-components/section--home-welcome";
+@import "_02-components/section--home-meet";
+@import "_02-components/section--land-wrap";
+@import "_02-components/section--wine-details";
 
-@import
-  '_02-components/animation',
-  '_02-components/bg--color',
-  '_02-components/block--detail',
-  '_02-components/block--footer-email',
-  '_02-components/block--footer-social',
-  '_02-components/buttons',
-  '_02-components/color',
-  '_02-components/display',
-  '_02-components/font--utils',
-  '_02-components/flex',
-  '_02-components/grid',
-  '_02-components/grid--double',
-  '_02-components/icons',
-  '_02-components/margin',
-  '_02-components/mobile--nav',
-  '_02-components/moose',
-  '_02-components/shopify',
-  '_02-components/spacing',
-  '_02-components/section--age-gate',
-  '_02-components/section--blog-header',
-  '_02-components/section--footer',
-  '_02-components/section--footer-bottom',
-  '_02-components/section--header',
-  '_02-components/section--home-hero',
-  '_02-components/section--home-welcome',
-  '_02-components/section--home-meet',
-  '_02-components/section--land-wrap',
-  '_02-components/section--wine-details';
-
-@import
-
-  '_04-pages/home';
+@import "_04-pages/home";

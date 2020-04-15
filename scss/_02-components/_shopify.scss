@@ -1,3 +1,13 @@
+.shopify-buy__cart {
+    height: unset !important;
+    width: unset !important;
+    overflow: hidden !important;
+    box-shadow: none !important;
+    position: relative !important;
+    background: none !important;
+    right: unset !important;
+}
+
 .shopify-buy__cart-toggle {
     position: relative;
     height: 20px;
@@ -85,6 +95,7 @@
 .shopify-buy-frame--toggle {
     @include media($max-xs) {}
 
+
     @include media($max-sm) {
         display: block !important;
         position: relative;
@@ -94,6 +105,7 @@
 
 
     @include media($max-md) {}
+
 
     @include media($max-lg) {}
 }
